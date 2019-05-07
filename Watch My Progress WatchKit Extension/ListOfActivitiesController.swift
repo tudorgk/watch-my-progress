@@ -12,19 +12,35 @@ import Foundation
 struct Headline {
     var title : String
 }
-class ListOfActivitiesControler: WKInterfaceController {
+class ListOfActivitiesController: WKInterfaceController {
 
     @IBOutlet weak var listOfActivitiesTable: WKInterfaceTable!
     
+    
+    let rowTypes = [HeaderController.type, HeaderController.type]
     var headlines = [
-        Headline( title: "Lorem Ipsum"),
-        Headline( title: "Aenean condimentum"),
-        Headline( title: "In ac ante sapien"),
+        Headline( title: "Stop watch"),
+        Headline( title: "Statistics"),
     ]
 
     override func awake(withContext context: Any?) {
         super.awake(withContext: context)
-        listOfActivitiesTable.setNumberOfRows(headlines.count, withRowType: "FlightRow")
         
+        listOfActivitiesTable.setNumberOfRows(headlines.count, withRowType: HeaderController.type)
+        listOfActivitiesTable.setRowTypes(rowTypes)
+        
+        for (index, element) in headlines.enumerated() {
+            let row = listOfActivitiesTable.rowController(at: index) as! HeaderController
+            row.titleLabel.setText(element.title)
+        }
+        
+    }
+    
+    override func table(_ table: WKInterfaceTable, didSelectRowAt rowIndex: Int) {
+        if rowIndex == 0 {
+            self.pushController(withName: "addTimeInterval", context: nil)
+        } else {
+            self.pushController(withName: "graph", context: nil)
+        }
     }
 }

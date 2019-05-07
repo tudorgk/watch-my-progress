@@ -32,7 +32,7 @@ class InterfaceController: WKInterfaceController, PausableTimerDelegate {
     override func willActivate(){
         super.willActivate()
     
-    
+        
     }
     
     @IBAction func pauseResumePressed() {
@@ -115,4 +115,5 @@ class InterfaceController: WKInterfaceController, PausableTimerDelegate {
         timerLabel.setText(timerForamtter.string(from: interval))
     }
 
+    
 }

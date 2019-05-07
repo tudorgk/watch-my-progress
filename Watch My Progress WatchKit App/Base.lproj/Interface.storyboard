@@ -1,12 +1,12 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<document type="com.apple.InterfaceBuilder.WatchKit.Storyboard" version="3.0" toolsVersion="14460.31" targetRuntime="watchKit" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" colorMatched="YES" initialViewController="AgC-eL-Hgc">
+<document type="com.apple.InterfaceBuilder.WatchKit.Storyboard" version="3.0" toolsVersion="14490.70" targetRuntime="watchKit" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" colorMatched="YES" initialViewController="V2a-lS-Khy">
     <device id="watch38" orientation="portrait">
         <adaptation id="fullscreen"/>
     </device>
     <dependencies>
         <deployment identifier="watchOS"/>
-        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="14460.20"/>
-        <plugIn identifier="com.apple.InterfaceBuilder.IBWatchKitPlugin" version="14460.16"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="14490.49"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBWatchKitPlugin" version="14490.21"/>
     </dependencies>
     <scenes>
         <!--addTimeInterval-->
@@ -136,6 +136,37 @@
                 <controller id="eXb-UN-Cd0" customClass="NotificationController" customModule="Watch_My_Progress_WatchKit_App" customModuleProvider="target"/>
             </objects>
             <point key="canvasLocation" x="468" y="345"/>
+        </scene>
+        <!--test1234-->
+        <scene sceneID="ZhQ-QV-DfT">
+            <objects>
+                <controller identifier="test1234" id="V2a-lS-Khy" customClass="ListOfActivitiesController" customModule="Watch_My_Progress_WatchKit_Extension">
+                    <items>
+                        <label alignment="center" text="Choose task" textAlignment="center" numberOfLines="2" id="3iA-ba-vXG">
+                            <color key="textColor" red="0.63410573100000001" green="0.47458784409999999" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                            <fontDescription key="font" style="UICTFontTextStyleTitle2"/>
+                        </label>
+                        <table alignment="left" id="z7I-Cy-pe3">
+                            <items>
+                                <tableRow identifier="Header" id="uVW-FR-gM8" customClass="HeaderController" customModule="Watch_My_Progress_WatchKit_Extension">
+                                    <group key="rootItem" width="1" alignment="left" id="zip-9N-9yc">
+                                        <items>
+                                            <label alignment="center" verticalAlignment="center" text="Label" id="NVK-C3-Rr6"/>
+                                        </items>
+                                    </group>
+                                    <connections>
+                                        <outlet property="titleLabel" destination="NVK-C3-Rr6" id="ySW-jb-Ywl"/>
+                                    </connections>
+                                </tableRow>
+                            </items>
+                        </table>
+                    </items>
+                    <connections>
+                        <outlet property="listOfActivitiesTable" destination="z7I-Cy-pe3" id="Gjo-H8-oC5"/>
+                    </connections>
+                </controller>
+            </objects>
+            <point key="canvasLocation" x="-195" y="49"/>
         </scene>
     </scenes>
 </document>
