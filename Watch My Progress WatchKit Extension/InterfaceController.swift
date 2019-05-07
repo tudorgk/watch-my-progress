@@ -16,6 +16,9 @@ class InterfaceController: WKInterfaceController, PausableTimerDelegate {
     
     @IBOutlet weak var stopButton: WKInterfaceButton!
 
+    @IBAction func switchToListMenuItem() {
+        pushController(withName: "intervalList", context: nil)
+    }
     
     var trackingTimer : PausableTimer?  //internal timer to keep track
     var isPaused = false //flag to determine if it is paused or not

@@ -11,6 +11,9 @@ import WatchKit
 
 class IntervalListInterfaceController: WKInterfaceController {
         @IBOutlet weak var timerTable: WKInterfaceTable!
+    @IBAction func changeToAddTimeIntervalScreen() {
+        popToRootController()
+    }
     
     let rowTypes = [HeaderController.type, RowController.type, RowController.type, HeaderController.type, RowController.type]
     let rowDataSource = ["Mobile Meetup Hackathon", "10 sec", "10 min", "Boringc Project", "59 min 2 sec"]

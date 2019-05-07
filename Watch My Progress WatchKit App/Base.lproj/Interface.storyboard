@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<document type="com.apple.InterfaceBuilder.WatchKit.Storyboard" version="3.0" toolsVersion="14460.31" targetRuntime="watchKit" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" colorMatched="YES" initialViewController="juG-ug-mUe">
+<document type="com.apple.InterfaceBuilder.WatchKit.Storyboard" version="3.0" toolsVersion="14460.31" targetRuntime="watchKit" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" colorMatched="YES" initialViewController="AgC-eL-Hgc">
     <device id="watch38" orientation="portrait">
         <adaptation id="fullscreen"/>
     </device>
@@ -9,10 +9,10 @@
         <plugIn identifier="com.apple.InterfaceBuilder.IBWatchKitPlugin" version="14460.16"/>
     </dependencies>
     <scenes>
-        <!--Interface Controller-->
+        <!--addTimeInterval-->
         <scene sceneID="aou-V4-d1y">
             <objects>
-                <controller id="AgC-eL-Hgc" customClass="InterfaceController" customModule="Watch_My_Progress_WatchKit_App" customModuleProvider="target">
+                <controller identifier="addTimeInterval" id="AgC-eL-Hgc" customClass="InterfaceController" customModule="Watch_My_Progress_WatchKit_App" customModuleProvider="target">
                     <items>
                         <label alignment="center" text="Ready to start working?" textAlignment="center" numberOfLines="2" id="IV9-g6-hLx">
                             <color key="textColor" red="0.63410573100000001" green="0.47458784409999999" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
@@ -39,6 +39,15 @@
                             </items>
                         </group>
                     </items>
+                    <menu key="menu" id="E28-fh-dqp">
+                        <items>
+                            <menuItem title="Switch to list" icon="more" id="oPc-I0-qON">
+                                <connections>
+                                    <action selector="switchToListMenuItem" destination="AgC-eL-Hgc" id="dut-Is-u3o"/>
+                                </connections>
+                            </menuItem>
+                        </items>
+                    </menu>
                     <connections>
                         <outlet property="startPauseButton" destination="52L-Xv-5G8" id="nTr-op-C1d"/>
                         <outlet property="stopButton" destination="ZZ7-UB-C8x" id="7Au-hY-bWW"/>
@@ -98,6 +107,15 @@
                             </items>
                         </table>
                     </items>
+                    <menu key="menu" id="Yuw-YC-6Cd">
+                        <items>
+                            <menuItem title="Menu Item" icon="add" id="H2K-rN-YBZ">
+                                <connections>
+                                    <action selector="changeToAddTimeIntervalScreen" destination="juG-ug-mUe" id="7UD-nF-avw"/>
+                                </connections>
+                            </menuItem>
+                        </items>
+                    </menu>
                     <connections>
                         <outlet property="timerTable" destination="qi9-ej-V54" id="NMd-KF-aLm"/>
                     </connections>
