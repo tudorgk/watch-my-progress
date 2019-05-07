@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<document type="com.apple.InterfaceBuilder.WatchKit.Storyboard" version="3.0" toolsVersion="14460.31" targetRuntime="watchKit" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" colorMatched="YES" initialViewController="AgC-eL-Hgc">
+<document type="com.apple.InterfaceBuilder.WatchKit.Storyboard" version="3.0" toolsVersion="14460.31" targetRuntime="watchKit" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" colorMatched="YES" initialViewController="juG-ug-mUe">
     <device id="watch38" orientation="portrait">
         <adaptation id="fullscreen"/>
     </device>
@@ -72,7 +72,7 @@
                     <items>
                         <table alignment="left" id="qi9-ej-V54">
                             <items>
-                                <tableRow identifier="Header" id="0ts-XV-FVL" customClass="HeaderController" customModule="Watch_My_Progress_WatchKit_Extension">
+                                <tableRow identifier="Header" selectable="NO" id="0ts-XV-FVL" customClass="HeaderController" customModule="Watch_My_Progress_WatchKit_Extension">
                                     <group key="rootItem" width="1" alignment="left" id="VwQ-ra-fnF">
                                         <items>
                                             <label alignment="left" verticalAlignment="center" text="Mobile Meetup " numberOfLines="2" id="cRo-v6-B5l">
