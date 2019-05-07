@@ -1,0 +1,27 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder.WatchKit.Storyboard" version="3.0" toolsVersion="14490.70" targetRuntime="watchKit" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" colorMatched="YES">
+    <device id="watch38" orientation="portrait">
+        <adaptation id="fullscreen"/>
+    </device>
+    <dependencies>
+        <deployment identifier="watchOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="14490.49"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBWatchKitPlugin" version="14490.21"/>
+    </dependencies>
+    <scenes>
+        <!--RingInterfaceController-->
+        <scene sceneID="DM2-W9-gEv">
+            <objects>
+                <controller identifier="RingInterfaceController" spacing="0.0" id="U62-T8-TRC" customClass="RingInterfaceController" customModule="Watch_My_Progress_WatchKit_Extension">
+                    <items>
+                        <imageView width="1" height="1" alignment="center" verticalAlignment="center" contentMode="scaleAspectFit" id="ggz-6P-PJT"/>
+                    </items>
+                    <connections>
+                        <outlet property="image" destination="ggz-6P-PJT" id="XKo-2j-K2i"/>
+                    </connections>
+                </controller>
+            </objects>
+            <point key="canvasLocation" x="-641" y="10"/>
+        </scene>
+    </scenes>
+</document>
