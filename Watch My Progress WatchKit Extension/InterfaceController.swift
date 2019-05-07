@@ -19,6 +19,9 @@ class InterfaceController: WKInterfaceController, PausableTimerDelegate {
     @IBAction func switchToListMenuItem() {
         pushController(withName: "intervalList", context: nil)
     }
+    @IBAction func switchToGraph() {
+        pushController(withName: "graph", context: nil)
+    }
     
     var trackingTimer : PausableTimer?  //internal timer to keep track
     var isPaused = false //flag to determine if it is paused or not

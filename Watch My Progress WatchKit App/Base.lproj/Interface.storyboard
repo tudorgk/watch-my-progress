@@ -46,6 +46,11 @@
                                     <action selector="switchToListMenuItem" destination="AgC-eL-Hgc" id="dut-Is-u3o"/>
                                 </connections>
                             </menuItem>
+                            <menuItem title="Show graph" icon="info" id="FVR-hO-2x6">
+                                <connections>
+                                    <action selector="switchToGraph" destination="AgC-eL-Hgc" id="y13-Hv-zRw"/>
+                                </connections>
+                            </menuItem>
                         </items>
                     </menu>
                     <connections>
@@ -122,6 +127,21 @@
                 </controller>
             </objects>
             <point key="canvasLocation" x="220" y="985"/>
+        </scene>
+        <!--graph-->
+        <scene sceneID="xvk-OR-IOL">
+            <objects>
+                <controller identifier="graph" id="Tib-TY-dGk">
+                    <items>
+                        <group width="1" alignment="left" id="lJe-wu-Fp2">
+                            <items>
+                                <imageView alignment="center" image="heartrate" contentMode="scaleAspectFill" id="qeP-7w-6eN"/>
+                            </items>
+                        </group>
+                    </items>
+                </controller>
+            </objects>
+            <point key="canvasLocation" x="468" y="986"/>
         </scene>
         <!--Notification Controller-->
         <scene sceneID="ZPc-GJ-vnh">
