@@ -21,6 +21,8 @@
 		05A1597B228164360020880A /* NotificationController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 05A1597A228164360020880A /* NotificationController.swift */; };
 		05A1597D228164360020880A /* ComplicationController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 05A1597C228164360020880A /* ComplicationController.swift */; };
 		05A1597F228164370020880A /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 05A1597E228164370020880A /* Assets.xcassets */; };
+		926AC214228175D800A1145F /* HeartRateInterfaceController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 926AC213228175D800A1145F /* HeartRateInterfaceController.swift */; };
+		926AC2162281774100A1145F /* HeartRate.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 926AC2152281774100A1145F /* HeartRate.storyboard */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -85,6 +87,8 @@
 		05A1597E228164370020880A /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		05A15980228164370020880A /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		05A15981228164370020880A /* PushNotificationPayload.apns */ = {isa = PBXFileReference; lastKnownFileType = text; path = PushNotificationPayload.apns; sourceTree = "<group>"; };
+		926AC213228175D800A1145F /* HeartRateInterfaceController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HeartRateInterfaceController.swift; sourceTree = "<group>"; };
+		926AC2152281774100A1145F /* HeartRate.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = HeartRate.storyboard; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -144,6 +148,7 @@
 				05A15967228164350020880A /* Interface.storyboard */,
 				05A1596A228164360020880A /* Assets.xcassets */,
 				05A1596C228164360020880A /* Info.plist */,
+				926AC2152281774100A1145F /* HeartRate.storyboard */,
 			);
 			path = "Watch My Progress WatchKit App";
 			sourceTree = "<group>";
@@ -152,6 +157,7 @@
 			isa = PBXGroup;
 			children = (
 				05A15976228164360020880A /* InterfaceController.swift */,
+				926AC213228175D800A1145F /* HeartRateInterfaceController.swift */,
 				05A15978228164360020880A /* ExtensionDelegate.swift */,
 				05A1597A228164360020880A /* NotificationController.swift */,
 				05A1597C228164360020880A /* ComplicationController.swift */,
@@ -276,6 +282,7 @@
 			files = (
 				05A1596B228164360020880A /* Assets.xcassets in Resources */,
 				05A15969228164350020880A /* Interface.storyboard in Resources */,
+				926AC2162281774100A1145F /* HeartRate.storyboard in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -305,6 +312,7 @@
 			files = (
 				05A1597B228164360020880A /* NotificationController.swift in Sources */,
 				05A1597D228164360020880A /* ComplicationController.swift in Sources */,
+				926AC214228175D800A1145F /* HeartRateInterfaceController.swift in Sources */,
 				05A15979228164360020880A /* ExtensionDelegate.swift in Sources */,
 				05A15977228164360020880A /* InterfaceController.swift in Sources */,
 			);
