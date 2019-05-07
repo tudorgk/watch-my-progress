@@ -10,13 +10,14 @@ import WatchKit
 import Foundation
 
 
-class InterfaceController: WKInterfaceController {
-    @IBOutlet weak var mainTimer: WKInterfaceTimer!
+class InterfaceController: WKInterfaceController, PausableTimerDelegate {
+    @IBOutlet weak var timerLabel: WKInterfaceLabel!
     @IBOutlet weak var startPauseButton: WKInterfaceButton!
     
     @IBOutlet weak var stopButton: WKInterfaceButton!
 
-    var myTimer : Timer?  //internal timer to keep track
+    
+    var trackingTimer : PausableTimer?  //internal timer to keep track
     var isPaused = false //flag to determine if it is paused or not
     var firstStart = false
     
@@ -33,9 +34,11 @@ class InterfaceController: WKInterfaceController {
     
     @IBAction func pauseResumePressed() {
         if !firstStart {
-            mainTimer.setDate(Date())
-            mainTimer.start()
+            
+            trackingTimer = PausableTimer.init(interval: 1.0, delegate: self, autostart: true, repeats: true)
+            
             firstStart = true
+            startPauseButton.setTitle("Pause")
             return
             
         }
@@ -43,7 +46,8 @@ class InterfaceController: WKInterfaceController {
         //timer is paused. so unpause it and resume countdown
         if isPaused{
             isPaused = false
-            mainTimer.start()
+            
+            trackingTimer?.resume()
             
             startPauseButton.setTitle("Pause")
         }
@@ -52,16 +56,50 @@ class InterfaceController: WKInterfaceController {
             isPaused = true
         
             //stop watchkit timer on the screen
-            mainTimer.stop()
+            trackingTimer?.pause()
             
             //do whatever UI changes you need to
             startPauseButton.setTitle("Resume")
         }
     }
     
-    @objc func timerDone(){
-        //timer done counting down
+    @IBAction func stopButtonTapped() {
+        firstStart = false
+        startPauseButton.setTitle("Start")
+        trackingTimer?.stop()
+        trackingTimer = nil
+    
+        presentAlert(
+            withTitle: "Save your progress?",
+            message: "Choose which project you want to save to",
+            preferredStyle: .actionSheet,
+            actions: [
+                WKAlertAction(title: "Mobile Meetup Hackathon", style: .default, handler: {
+                    self.dismiss()
+                }),
+                WKAlertAction(title: "Boring Project", style: .default, handler: {
+                    self.dismiss()
+                }),
+                WKAlertAction(title: "Cancel", style: .cancel, handler: {
+                    self.dismiss()
+                })
+            ])
+    }
+
+    
+    func timerStopped(PausableTimer: PausableTimer) {
+//        timerLabel.setText(PausableTimer.timeElapsed.debugDescription)
     }
     
+    let timerForamtter : DateComponentsFormatter = {
+        var dcf = DateComponentsFormatter()
+        dcf.unitsStyle = .short
+        return dcf
+    }()
+    
+    func elapsedTime(interval: TimeInterval) {
+        
+        timerLabel.setText(timerForamtter.string(from: interval))
+    }
 
 }

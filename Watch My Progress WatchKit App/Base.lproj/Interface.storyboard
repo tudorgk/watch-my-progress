@@ -14,11 +14,14 @@
             <objects>
                 <controller id="AgC-eL-Hgc" customClass="InterfaceController" customModule="Watch_My_Progress_WatchKit_App" customModuleProvider="target">
                     <items>
-                        <group width="1" height="0.5" alignment="center" id="nmH-Sv-JWU">
+                        <label alignment="center" text="Ready to start working?" textAlignment="center" numberOfLines="2" id="IV9-g6-hLx">
+                            <color key="textColor" red="0.63410573100000001" green="0.47458784409999999" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                        </label>
+                        <group width="1" height="0.25" alignment="center" id="nmH-Sv-JWU">
                             <items>
-                                <timer alignment="center" verticalAlignment="center" textAlignment="center" format="short" previewedSeconds="7000" id="vcB-Au-8Bk">
-                                    <fontDescription key="font" style="UICTFontTextStyleTitle3"/>
-                                </timer>
+                                <label alignment="center" verticalAlignment="center" text="0 sec" textAlignment="center" id="Rze-MW-uHi">
+                                    <fontDescription key="font" style="UICTFontTextStyleTitle2"/>
+                                </label>
                             </items>
                         </group>
                         <group width="1" height="0.5" alignment="center" verticalAlignment="bottom" spacing="7" id="mCR-3t-Fhh">
@@ -30,16 +33,16 @@
                                 </button>
                                 <button width="0.5" height="0.5" alignment="right" verticalAlignment="bottom" title="Stop" id="ZZ7-UB-C8x">
                                     <connections>
-                                        <action selector="stopTimer" destination="AgC-eL-Hgc" id="54Y-O5-D4k"/>
+                                        <action selector="stopButtonTapped" destination="AgC-eL-Hgc" id="89X-oS-wLz"/>
                                     </connections>
                                 </button>
                             </items>
                         </group>
                     </items>
                     <connections>
-                        <outlet property="mainTimer" destination="vcB-Au-8Bk" id="Arx-DU-A6N"/>
                         <outlet property="startPauseButton" destination="52L-Xv-5G8" id="nTr-op-C1d"/>
                         <outlet property="stopButton" destination="ZZ7-UB-C8x" id="7Au-hY-bWW"/>
+                        <outlet property="timerLabel" destination="Rze-MW-uHi" id="F7W-sm-1NQ"/>
                     </connections>
                 </controller>
             </objects>
@@ -61,6 +64,46 @@
                 </notificationController>
             </objects>
             <point key="canvasLocation" x="220" y="643"/>
+        </scene>
+        <!--intervalList-->
+        <scene sceneID="9cY-nI-qnT">
+            <objects>
+                <controller identifier="intervalList" id="juG-ug-mUe" customClass="IntervalListInterfaceController" customModule="Watch_My_Progress_WatchKit_Extension">
+                    <items>
+                        <table alignment="left" id="qi9-ej-V54">
+                            <items>
+                                <tableRow identifier="Header" id="0ts-XV-FVL" customClass="HeaderController" customModule="Watch_My_Progress_WatchKit_Extension">
+                                    <group key="rootItem" width="1" alignment="left" id="VwQ-ra-fnF">
+                                        <items>
+                                            <label alignment="left" verticalAlignment="center" text="Mobile Meetup " numberOfLines="2" id="cRo-v6-B5l">
+                                                <color key="textColor" red="0.63410573100000001" green="0.47458784409999999" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                            </label>
+                                        </items>
+                                        <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                    </group>
+                                    <connections>
+                                        <outlet property="titleLabel" destination="cRo-v6-B5l" id="WtB-xK-dx4"/>
+                                    </connections>
+                                </tableRow>
+                                <tableRow identifier="Row" id="TeU-Ye-g3W" customClass="RowController" customModule="Watch_My_Progress_WatchKit_Extension">
+                                    <group key="rootItem" width="1" alignment="left" id="nKz-En-jzQ">
+                                        <items>
+                                            <label alignment="left" verticalAlignment="center" text="0 sec" id="2h3-ds-hGu"/>
+                                        </items>
+                                    </group>
+                                    <connections>
+                                        <outlet property="titleLabel" destination="2h3-ds-hGu" id="8oz-Od-yM3"/>
+                                    </connections>
+                                </tableRow>
+                            </items>
+                        </table>
+                    </items>
+                    <connections>
+                        <outlet property="timerTable" destination="qi9-ej-V54" id="NMd-KF-aLm"/>
+                    </connections>
+                </controller>
+            </objects>
+            <point key="canvasLocation" x="220" y="985"/>
         </scene>
         <!--Notification Controller-->
         <scene sceneID="ZPc-GJ-vnh">
