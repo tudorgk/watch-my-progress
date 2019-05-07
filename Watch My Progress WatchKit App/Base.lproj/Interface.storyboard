@@ -16,9 +16,7 @@
                     <items>
                         <group width="1" height="0.5" alignment="center" id="nmH-Sv-JWU">
                             <items>
-                                <timer alignment="center" verticalAlignment="center" textAlignment="center" format="short" previewedSeconds="7000" id="vcB-Au-8Bk">
-                                    <fontDescription key="font" style="UICTFontTextStyleTitle3"/>
-                                </timer>
+                                <label alignment="center" verticalAlignment="center" text="Label" id="CIx-zT-EqV"/>
                             </items>
                         </group>
                         <group width="1" height="0.5" alignment="center" verticalAlignment="bottom" spacing="7" id="mCR-3t-Fhh">
@@ -37,9 +35,9 @@
                         </group>
                     </items>
                     <connections>
-                        <outlet property="mainTimer" destination="vcB-Au-8Bk" id="Arx-DU-A6N"/>
                         <outlet property="startPauseButton" destination="52L-Xv-5G8" id="nTr-op-C1d"/>
                         <outlet property="stopButton" destination="ZZ7-UB-C8x" id="7Au-hY-bWW"/>
+                        <outlet property="timerLabel" destination="CIx-zT-EqV" id="q2Z-XJ-sWH"/>
                     </connections>
                 </controller>
             </objects>
