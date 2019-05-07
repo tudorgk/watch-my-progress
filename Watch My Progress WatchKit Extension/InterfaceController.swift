@@ -26,7 +26,13 @@ class InterfaceController: WKInterfaceController, PausableTimerDelegate {
     
     override func awake(withContext context: Any?) {
         super.awake(withContext: context)
-        
+        if
+            let context = context as? [String: Any],
+            let action = context["action"] as? String,
+            action == "checkIn"
+        {
+            pauseResumePressed()
+        }
     }
     
     override func willActivate(){

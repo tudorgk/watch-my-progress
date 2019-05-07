@@ -38,45 +38,44 @@ class ComplicationController: NSObject, CLKComplicationDataSource {
     func getCurrentTimelineEntry(for complication: CLKComplication, withHandler handler: @escaping ((CLKComplicationTimelineEntry?) -> Void)) {
         // Get the complication data from the extension delegate.
         
-        var entry : CLKComplicationTimelineEntry?
         var template : CLKComplicationTemplate?
-        let now = NSDate()
+        var now: Date?
         
         // Create the template and timeline entry.
         if complication.family == .modularSmall {
-            let firstText = "test"
-            let shortText = "2344"
+            let firstText = ""
+            let shortText = ""
             
             let textTemplate = CLKComplicationTemplateModularSmallStackImage()
-            
-            textTemplate.line1ImageProvider = CLKImageProvider(onePieceImage: UIImage(named: "happy")!)
+
+            textTemplate.line1ImageProvider = CLKImageProvider(onePieceImage: #imageLiteral(resourceName: "timericon64"))
             textTemplate.line2TextProvider = CLKSimpleTextProvider(text: firstText,
                                                                    shortText: shortText)
-            
-           
+
+            now = Date().encodedForComplication(type: .small1)!
             template = textTemplate
         }
-        else  if complication.family == .modularLarge{
+        else if complication.family == .modularLarge {
           
             let modularLargeTemplate =
                 CLKComplicationTemplateModularLargeStandardBody()
-            modularLargeTemplate.headerImageProvider = CLKImageProvider(onePieceImage: UIImage(named: "happy")!)
+            //modularLargeTemplate.headerImageProvider = CLKImageProvider(onePieceImage: UIImage(named: "happy")!)
             modularLargeTemplate.headerTextProvider =
                 CLKSimpleTextProvider(text: "Watch my progress",
                                     shortText: "Watch my progress")
             modularLargeTemplate.body1TextProvider =
-                CLKSimpleTextProvider(text: "Invoice",
-                                      shortText: "90 332")
+                CLKSimpleTextProvider(text: "Do your hours",
+                                      shortText: "Do your hours")
             modularLargeTemplate.body2TextProvider =
-                CLKSimpleTextProvider(text: "Stop watch",
-                                      shortText: "10 minutes 23 second")
-            
-           
+                CLKSimpleTextProvider(text: "Holiday upcoming",
+                                      shortText: "Holiday upcoming")
+
+            now = Date().encodedForComplication(type: .big)!
             template = modularLargeTemplate
         }
         
         // Pass the timeline entry back to ClockKit.
-        handler(CLKComplicationTimelineEntry(date: now as Date, complicationTemplate: template!))
+        handler(CLKComplicationTimelineEntry(date: now ?? Date(), complicationTemplate: template!))
 
     }
     

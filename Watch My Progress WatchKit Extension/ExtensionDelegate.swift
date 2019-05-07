@@ -53,4 +53,62 @@ class ExtensionDelegate: NSObject, WKExtensionDelegate {
         }
     }
 
+    // Triggered when a complication is tapped
+    func handleUserActivity(_ userInfo: [AnyHashable : Any]?) {
+        var rootControllerIdentifier = "RingInterfaceController"
+        var context: AnyObject = [:] as AnyObject
+        if let date = userInfo?[CLKLaunchedTimelineEntryDateKey] as? Date {
+            // We now know the app was definitely
+            // launched by tapping the complication
+            if let type = date.complicationTypeFromEncodedDate {
+                switch type {
+                case .small1:
+                    rootControllerIdentifier = "addTimeInterval"
+                    context = ["action": "checkIn"] as AnyObject
+                default: break
+                }
+            }
+        } else {
+            print("No date")
+        }
+        WKInterfaceController.reloadRootControllers(withNamesAndContexts: [(name: rootControllerIdentifier, context: context)])
+    }
+}
+
+enum ComplicationType: Int {
+    case big
+    case small1
+    case small2
+}
+
+extension Date {
+    var complicationTypeFromEncodedDate: ComplicationType? {
+        let calendar = Calendar.current
+        let ns = calendar.component(.nanosecond, from: self)
+
+        return ComplicationType(rawValue: ns.nanosecondsToMilliseconds)
+    }
+}
+
+extension Int {
+    var nanosecondsToMilliseconds: Int {
+        return Int(round(Double(self) / 1000000))
+    }
+}
+
+extension Date {
+    func encodedForComplication(type: ComplicationType) -> Date? {
+        let calendar = Calendar.current
+
+        var dc = calendar.dateComponents(in: calendar.timeZone, from: self)
+        dc.nanosecond = type.rawValue.millisecondsToNanoseconds
+
+        return calendar.date(from: dc)
+    }
+}
+
+extension Int {
+    var millisecondsToNanoseconds: Int {
+        return self * 1000000
+    }
 }
