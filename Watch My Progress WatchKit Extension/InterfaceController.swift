@@ -12,7 +12,6 @@ import Foundation
 
 class InterfaceController: WKInterfaceController, PausableTimerDelegate {
     @IBOutlet weak var timerLabel: WKInterfaceLabel!
-    @IBOutlet weak var mainTimer: WKInterfaceTimer!
     @IBOutlet weak var startPauseButton: WKInterfaceButton!
     
     @IBOutlet weak var stopButton: WKInterfaceButton!
@@ -21,7 +20,6 @@ class InterfaceController: WKInterfaceController, PausableTimerDelegate {
     var trackingTimer : PausableTimer?  //internal timer to keep track
     var isPaused = false //flag to determine if it is paused or not
     var firstStart = false
-    var startDate: Date!
     
     override func awake(withContext context: Any?) {
         super.awake(withContext: context)
@@ -36,9 +34,6 @@ class InterfaceController: WKInterfaceController, PausableTimerDelegate {
     
     @IBAction func pauseResumePressed() {
         if !firstStart {
-            startDate = Date()
-            mainTimer.setDate(startDate)
-            mainTimer.start()
             
             trackingTimer = PausableTimer.init(interval: 1.0, delegate: self, autostart: true, repeats: true)
             
@@ -52,8 +47,6 @@ class InterfaceController: WKInterfaceController, PausableTimerDelegate {
         if isPaused{
             isPaused = false
             
-            mainTimer.setDate(Date(timeInterval: (trackingTimer?.timeElapsed)!, since: startDate))
-            mainTimer.start()
             trackingTimer?.resume()
             
             startPauseButton.setTitle("Pause")
@@ -63,7 +56,6 @@ class InterfaceController: WKInterfaceController, PausableTimerDelegate {
             isPaused = true
         
             //stop watchkit timer on the screen
-            mainTimer.stop()
             trackingTimer?.pause()
             
             //do whatever UI changes you need to
@@ -72,26 +64,24 @@ class InterfaceController: WKInterfaceController, PausableTimerDelegate {
     }
     
     @IBAction func stopButtonTapped() {
-        mainTimer.stop()
-        mainTimer.setDate(Date())
         firstStart = false
         startPauseButton.setTitle("Start")
-        
-        print("Time Remaining = \(String(describing: trackingTimer?.timeElapsed.debugDescription))")
-        //TODO: Show action sheet to save the timer.
-    }
+        trackingTimer?.stop()
+        trackingTimer = nil
     
-    @objc func timerDone(){
-        //timer done counting down
     }
+
     
     func timerStopped(PausableTimer: PausableTimer) {
 //        timerLabel.setText(PausableTimer.timeElapsed.debugDescription)
     }
     
+    let timerForamtter = {
+       return DateComponentsFormatter()
+    }()
     
     func elapsedTime(interval: TimeInterval) {
-        timerLabel.setText(interval.debugDescription)
+        timerLabel.setText(timerForamtter.string(from: interval))
     }
 
 }

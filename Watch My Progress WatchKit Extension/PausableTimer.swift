@@ -67,9 +67,9 @@ public class PausableTimer {
     }
     
     public func stop() {
-        self.delegate?.elapsedTime(interval: timeElapsed)
         self.timerCompleted()
         timeElapsed = 0
+        self.delegate?.elapsedTime(interval: timeElapsed)
     }
     
     
