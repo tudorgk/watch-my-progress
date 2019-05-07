@@ -489,7 +489,7 @@
 					"@executable_path/Frameworks",
 					"@executable_path/../../Frameworks",
 				);
-				PRODUCT_BUNDLE_IDENTIFIER = "com.watch.my.progress.Watch-My-Progress3.watchkitapp.watchkitextension";
+				PRODUCT_BUNDLE_IDENTIFIER = "com.watch.my.progress.Watch-My-Progress.watchkitapp.watchkitextension";
 				PRODUCT_NAME = "${TARGET_NAME}";
 				SDKROOT = watchos;
 				SKIP_INSTALL = YES;
@@ -511,7 +511,7 @@
 					"@executable_path/Frameworks",
 					"@executable_path/../../Frameworks",
 				);
-				PRODUCT_BUNDLE_IDENTIFIER = "com.watch.my.progress.Watch-My-Progress3.watchkitapp.watchkitextension";
+				PRODUCT_BUNDLE_IDENTIFIER = "com.watch.my.progress.Watch-My-Progress.watchkitapp.watchkitextension";
 				PRODUCT_NAME = "${TARGET_NAME}";
 				SDKROOT = watchos;
 				SKIP_INSTALL = YES;
@@ -530,7 +530,7 @@
 				DEVELOPMENT_TEAM = HMP4RRN555;
 				IBSC_MODULE = Watch_My_Progress_WatchKit_Extension;
 				INFOPLIST_FILE = "Watch My Progress WatchKit App/Info.plist";
-				PRODUCT_BUNDLE_IDENTIFIER = "com.watch.my.progress.Watch-My-Progress3.watchkitapp";
+				PRODUCT_BUNDLE_IDENTIFIER = "com.watch.my.progress.Watch-My-Progress.watchkitapp";
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SDKROOT = watchos;
 				SKIP_INSTALL = YES;
@@ -549,7 +549,7 @@
 				DEVELOPMENT_TEAM = HMP4RRN555;
 				IBSC_MODULE = Watch_My_Progress_WatchKit_Extension;
 				INFOPLIST_FILE = "Watch My Progress WatchKit App/Info.plist";
-				PRODUCT_BUNDLE_IDENTIFIER = "com.watch.my.progress.Watch-My-Progress3.watchkitapp";
+				PRODUCT_BUNDLE_IDENTIFIER = "com.watch.my.progress.Watch-My-Progress.watchkitapp";
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SDKROOT = watchos;
 				SKIP_INSTALL = YES;
@@ -570,7 +570,7 @@
 					"$(inherited)",
 					"@executable_path/Frameworks",
 				);
-				PRODUCT_BUNDLE_IDENTIFIER = "com.watch.my.progress.Watch-My-Progress3";
+				PRODUCT_BUNDLE_IDENTIFIER = "com.watch.my.progress.Watch-My-Progress";
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_VERSION = 4.2;
 				TARGETED_DEVICE_FAMILY = "1,2";
@@ -588,7 +588,7 @@
 					"$(inherited)",
 					"@executable_path/Frameworks",
 				);
-				PRODUCT_BUNDLE_IDENTIFIER = "com.watch.my.progress.Watch-My-Progress3";
+				PRODUCT_BUNDLE_IDENTIFIER = "com.watch.my.progress.Watch-My-Progress";
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_VERSION = 4.2;
 				TARGETED_DEVICE_FAMILY = "1,2";
