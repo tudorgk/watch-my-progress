@@ -14,18 +14,11 @@
             <objects>
                 <controller identifier="HeartRateController" id="Wzc-9X-WdA" customClass="HeartRateInterfaceController" customModule="Watch_My_Progress_WatchKit_Extension">
                     <items>
-                        <label alignment="left" text="Label" textAlignment="left" numberOfLines="0" id="lD5-Yc-jjm">
-                            <color key="textColor" red="1" green="0.14913141730000001" blue="0.0" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
-                        </label>
-                        <button width="1" alignment="center" verticalAlignment="bottom" title="Button" id="scI-YW-ULj">
-                            <connections>
-                                <action selector="buttonPressed" destination="Wzc-9X-WdA" id="T3f-AX-L4W"/>
-                            </connections>
-                        </button>
+                        <imageView height="0.80000000000000004" alignment="left" id="fRF-KV-5gS"/>
+                        <label alignment="left" text="test" id="erQ-u7-Eog"/>
                     </items>
                     <connections>
-                        <outlet property="button" destination="scI-YW-ULj" id="Bzd-iv-Ti6"/>
-                        <outlet property="label" destination="lD5-Yc-jjm" id="LwT-yl-49n"/>
+                        <outlet property="image" destination="fRF-KV-5gS" id="vBC-dY-XBd"/>
                     </connections>
                 </controller>
             </objects>

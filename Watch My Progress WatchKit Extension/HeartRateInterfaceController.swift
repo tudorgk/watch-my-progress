@@ -9,25 +9,49 @@
 import WatchKit
 import Foundation
 import HealthKit
+import YOChartImageKit
 
 class HeartRateInterfaceController: WKInterfaceController {
-    @IBOutlet private weak var label: WKInterfaceLabel!
-    @IBOutlet private weak var button: WKInterfaceButton!
+    @IBOutlet private weak var image: WKInterfaceImage!
 
     override func willActivate() {
         // This method is called when watch view controller is about to be visible to user
         super.willActivate()
 
-        button.setTitle("Fetch")
-    }
+        let rates = [50, 51, 52, 53, 54, 55, 70, 90, 120, 180, 155, 143, 128, 111, 78, 53, 43, 12, 0]
+        let values = rates.map { NSNumber(value: $0) }
 
-    @IBAction func buttonPressed() {
-        getHeartRates { (heartRates) in
-            DispatchQueue.main.async {
-                let rates = heartRates.map { $0.doubleValue(for: HKUnit(from: "count/min")) }
-                self.label.setText("\(rates)")
-            }
-        }
+
+
+        let frame = CGRect(x: 0,
+                           y: 0,
+                           width: self.contentFrame.width,
+                           height: self.contentFrame.height * 0.8)
+
+        let chart = YOBarChartImage()
+        chart.values = values
+        chart.fillColor = UIColor.red
+
+        let chartImage = chart.draw(frame, scale: WKInterfaceDevice.current().screenScale)
+        self.image.setImage(chartImage)
+
+//        getHeartRates { (heartRates) in
+//            DispatchQueue.main.async {
+//                let rates = heartRates.map { $0.doubleValue(for: HKUnit(from: "count/min")) }
+//                let values = rates.map { NSNumber(value: $0) }
+//
+//                let frame = CGRect(x: 0,
+//                                   y: 0,
+//                                   width: self.contentFrame.width,
+//                                   height: self.contentFrame.height)
+//                let chart = YOBarChartImage()
+//                chart.values = values
+//                chart.fillColor = UIColor.red
+//
+//                let chartImage = chart.draw(frame, scale: WKInterfaceDevice.current().screenScale)
+//                self.image.setImage(chartImage)
+//            }
+//        }
     }
 }
 
@@ -36,25 +60,24 @@ extension HeartRateInterfaceController {
 
         let heartRateQuantityType = HKQuantityType.quantityType(forIdentifier: .heartRate)!
 
-        let now = Date()
-        let startOfDay = Calendar.current.startOfDay(for: now)
-        let predicate = HKQuery.predicateForSamples(withStart: startOfDay, end: now, options: .strictStartDate)
+        let start = Calendar.current.date(byAdding: .hour, value: -2, to: Date())
+        let end = Date()
+        let predicate = HKQuery.predicateForSamples(withStart: start, end: end, options: .strictStartDate)
 
-        let query = HKSampleQuery(sampleType: heartRateQuantityType,
-                      predicate: predicate,
-                      limit: 10000,
-                      sortDescriptors: nil) { (query, samples, error) in
+        let query = HKSampleQuery(
+            sampleType: heartRateQuantityType,
+            predicate: predicate,
+            limit: 10000,
+            sortDescriptors: nil) { (query, samples, error) in
 
-                        guard let samples = samples else { fatalError("oopsie") }
+                guard let samples = samples else { fatalError() }
+                guard let quantitySamples: [HKQuantitySample] = samples as? [HKQuantitySample] else { fatalError() }
 
-                        guard let quantitySamples: [HKQuantitySample] = samples as? [HKQuantitySample] else { return }
+                let heartRates = quantitySamples.map { $0.quantity }
 
-                        let heartRates = quantitySamples.map { $0.quantity }
-
-                        DispatchQueue.main.async {
-                            completion(heartRates)
-                        }
-
+                DispatchQueue.main.async {
+                    completion(heartRates)
+                }
         }
 
         HKHealthStore().execute(query)
