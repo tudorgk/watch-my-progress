@@ -9,7 +9,8 @@
 import Foundation
 
 public protocol PausableTimerDelegate: class {
-    func PausableTimerEvent(PausableTimer: PausableTimer)
+    func timerStopped(PausableTimer: PausableTimer)
+    func elapsedTime(interval: TimeInterval)
 }
 
 public class PausableTimer {
@@ -17,33 +18,17 @@ public class PausableTimer {
         didSet {
             if timer != nil {
                 startTime = Date()
-                pausedInterval = nil
             }
         }
     }
-    
 
     private var interval: TimeInterval
     private var repeats = false
     private var startTime: Date?
-    private var pausedInterval: TimeInterval?
     weak public var delegate: PausableTimerDelegate?
     
-    public var isPaused: Bool {
-        return pausedInterval != nil
-    }
-
-    public var isRunning: Bool {
-        return timer != nil
-    }
-
-    public var timeRemaining: TimeInterval? {
-        if let startTime = startTime {
-            return Date().timeIntervalSince(startTime)
-        }
-        
-        return nil
-    }
+    public var isPaused: Bool = false
+    public var timeElapsed: TimeInterval = 0
     
     public init(interval: TimeInterval, repeats: Bool = false) {
         self.interval = interval
@@ -65,28 +50,31 @@ public class PausableTimer {
     }
 
     public func start() {
-        timer = Timer.scheduledTimer(withTimeInterval: interval, repeats: repeats, block: { [weak self] _ in
-            self?.timerCompleted()
+        timer = Timer.scheduledTimer(withTimeInterval: interval, repeats: repeats, block: { [unowned self] _ in
+            self.timeElapsed = self.timeElapsed + self.interval
+            self.delegate?.elapsedTime(interval: self.timeElapsed)
         })
     }
     
     public func pause() {
-        if isRunning,
-            let startTime = startTime {
-            pausedInterval = Date().timeIntervalSince(startTime)
+        if !isPaused {
             terminateTimer()
         }
     }
     
     public func resume() {
-        if let pausedInterval = pausedInterval {
-            interval = pausedInterval
-            start()
-        }
+        start()
     }
-
+    
+    public func stop() {
+        self.delegate?.elapsedTime(interval: timeElapsed)
+        self.timerCompleted()
+        timeElapsed = 0
+    }
+    
+    
     private func timerCompleted() {
-        delegate?.PausableTimerEvent(PausableTimer: self)
+        delegate?.timerStopped(PausableTimer: self)
         if !repeats {
             terminateTimer()
         }
