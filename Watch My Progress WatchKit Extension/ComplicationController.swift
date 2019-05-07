@@ -43,17 +43,11 @@ class ComplicationController: NSObject, CLKComplicationDataSource {
         
         // Create the template and timeline entry.
         if complication.family == .modularSmall {
-            let firstText = ""
-            let shortText = ""
-            
-            let textTemplate = CLKComplicationTemplateModularSmallStackImage()
-
-            textTemplate.line1ImageProvider = CLKImageProvider(onePieceImage: #imageLiteral(resourceName: "timericon64"))
-            textTemplate.line2TextProvider = CLKSimpleTextProvider(text: firstText,
-                                                                   shortText: shortText)
+            let simpleImageTemplate = CLKComplicationTemplateModularSmallSimpleImage()
+            simpleImageTemplate.imageProvider = CLKImageProvider(onePieceImage: #imageLiteral(resourceName: "timericon64"))
 
             now = Date().encodedForComplication(type: .small1)!
-            template = textTemplate
+            template = simpleImageTemplate
         }
         else if complication.family == .modularLarge {
           
