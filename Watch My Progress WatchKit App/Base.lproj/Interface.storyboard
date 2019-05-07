@@ -123,6 +123,21 @@
             </objects>
             <point key="canvasLocation" x="220" y="985"/>
         </scene>
+        <!--graph-->
+        <scene sceneID="xvk-OR-IOL">
+            <objects>
+                <controller identifier="graph" id="Tib-TY-dGk">
+                    <items>
+                        <group width="1" alignment="left" id="lJe-wu-Fp2">
+                            <items>
+                                <imageView alignment="center" image="heartrate" contentMode="scaleAspectFill" id="qeP-7w-6eN"/>
+                            </items>
+                        </group>
+                    </items>
+                </controller>
+            </objects>
+            <point key="canvasLocation" x="468" y="986"/>
+        </scene>
         <!--Notification Controller-->
         <scene sceneID="ZPc-GJ-vnh">
             <objects>
