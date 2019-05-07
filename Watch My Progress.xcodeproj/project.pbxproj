@@ -25,10 +25,12 @@
 		05A1597B228164360020880A /* NotificationController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 05A1597A228164360020880A /* NotificationController.swift */; };
 		05A1597D228164360020880A /* ComplicationController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 05A1597C228164360020880A /* ComplicationController.swift */; };
 		05A1597F228164370020880A /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 05A1597E228164370020880A /* Assets.xcassets */; };
-		0B0FAE562281B72500B21328 /* ListOfActivitiesController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0B0FAE552281B72500B21328 /* ListOfActivitiesController.swift */; };
-		0B0FAE582281B86E00B21328 /* ListOfActivities.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 0B0FAE572281B86E00B21328 /* ListOfActivities.storyboard */; };
 		162734812281774A00A26696 /* Ring.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 162734802281774A00A26696 /* Ring.storyboard */; };
 		16273483228179D000A26696 /* RingInterfaceController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 16273482228179D000A26696 /* RingInterfaceController.swift */; };
+		926AC214228175D800A1145F /* HeartRateInterfaceController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 926AC213228175D800A1145F /* HeartRateInterfaceController.swift */; };
+		926AC2162281774100A1145F /* HeartRate.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 926AC2152281774100A1145F /* HeartRate.storyboard */; };
+		926AC21A22819B0800A1145F /* HealthKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 926AC21922819B0800A1145F /* HealthKit.framework */; };
+		926AC21D2281A1AF00A1145F /* HealthKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 926AC21C2281A1AF00A1145F /* HealthKit.framework */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -97,10 +99,14 @@
 		05A1597E228164370020880A /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		05A15980228164370020880A /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		05A15981228164370020880A /* PushNotificationPayload.apns */ = {isa = PBXFileReference; lastKnownFileType = text; path = PushNotificationPayload.apns; sourceTree = "<group>"; };
-		0B0FAE552281B72500B21328 /* ListOfActivitiesController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ListOfActivitiesController.swift; sourceTree = "<group>"; };
-		0B0FAE572281B86E00B21328 /* ListOfActivities.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = ListOfActivities.storyboard; sourceTree = "<group>"; };
 		162734802281774A00A26696 /* Ring.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = Ring.storyboard; sourceTree = "<group>"; };
 		16273482228179D000A26696 /* RingInterfaceController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RingInterfaceController.swift; sourceTree = "<group>"; };
+		926AC213228175D800A1145F /* HeartRateInterfaceController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HeartRateInterfaceController.swift; sourceTree = "<group>"; };
+		926AC2152281774100A1145F /* HeartRate.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = HeartRate.storyboard; sourceTree = "<group>"; };
+		926AC21722819B0800A1145F /* Watch My Progress WatchKit Extension.entitlements */ = {isa = PBXFileReference; lastKnownFileType = text.plist.entitlements; path = "Watch My Progress WatchKit Extension.entitlements"; sourceTree = "<group>"; };
+		926AC21922819B0800A1145F /* HealthKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = HealthKit.framework; path = Platforms/WatchOS.platform/Developer/SDKs/WatchOS5.2.sdk/System/Library/Frameworks/HealthKit.framework; sourceTree = DEVELOPER_DIR; };
+		926AC21B2281A1AF00A1145F /* Watch My Progress.entitlements */ = {isa = PBXFileReference; lastKnownFileType = text.plist.entitlements; path = "Watch My Progress.entitlements"; sourceTree = "<group>"; };
+		926AC21C2281A1AF00A1145F /* HealthKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = HealthKit.framework; path = System/Library/Frameworks/HealthKit.framework; sourceTree = SDKROOT; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -108,6 +114,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				926AC21D2281A1AF00A1145F /* HealthKit.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -115,6 +122,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				926AC21A22819B0800A1145F /* HealthKit.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -128,6 +136,7 @@
 				05A15966228164350020880A /* Watch My Progress WatchKit App */,
 				05A15975228164360020880A /* Watch My Progress WatchKit Extension */,
 				05A15951228164340020880A /* Products */,
+				926AC21822819B0800A1145F /* Frameworks */,
 			);
 			sourceTree = "<group>";
 		};
@@ -144,6 +153,7 @@
 		05A15952228164340020880A /* Watch My Progress */ = {
 			isa = PBXGroup;
 			children = (
+				926AC21B2281A1AF00A1145F /* Watch My Progress.entitlements */,
 				05A15953228164340020880A /* AppDelegate.swift */,
 				05A15955228164340020880A /* ViewController.swift */,
 				05A1595A228164350020880A /* Assets.xcassets */,
@@ -161,7 +171,7 @@
 				05A1596A228164360020880A /* Assets.xcassets */,
 				05A1596C228164360020880A /* Info.plist */,
 				162734802281774A00A26696 /* Ring.storyboard */,
-				0B0FAE572281B86E00B21328 /* ListOfActivities.storyboard */,
+				926AC2152281774100A1145F /* HeartRate.storyboard */,
 			);
 			path = "Watch My Progress WatchKit App";
 			sourceTree = "<group>";
@@ -169,7 +179,9 @@
 		05A15975228164360020880A /* Watch My Progress WatchKit Extension */ = {
 			isa = PBXGroup;
 			children = (
+				926AC21722819B0800A1145F /* Watch My Progress WatchKit Extension.entitlements */,
 				05A15976228164360020880A /* InterfaceController.swift */,
+				926AC213228175D800A1145F /* HeartRateInterfaceController.swift */,
 				05A15978228164360020880A /* ExtensionDelegate.swift */,
 				05A1597A228164360020880A /* NotificationController.swift */,
 				05A1597C228164360020880A /* ComplicationController.swift */,
@@ -181,9 +193,17 @@
 				055E3CA42281A42300431F33 /* IntervalListInterfaceController.swift */,
 				05298F6B2281AC4F0076B225 /* RowController.swift */,
 				05298F6D2281AEE20076B225 /* HeaderController.swift */,
-				0B0FAE552281B72500B21328 /* ListOfActivitiesController.swift */,
 			);
 			path = "Watch My Progress WatchKit Extension";
+			sourceTree = "<group>";
+		};
+		926AC21822819B0800A1145F /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				926AC21C2281A1AF00A1145F /* HealthKit.framework */,
+				926AC21922819B0800A1145F /* HealthKit.framework */,
+			);
+			name = Frameworks;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -254,12 +274,22 @@
 				TargetAttributes = {
 					05A1594F228164340020880A = {
 						CreatedOnToolsVersion = 10.1;
+						SystemCapabilities = {
+							com.apple.HealthKit = {
+								enabled = 1;
+							};
+						};
 					};
 					05A15961228164350020880A = {
 						CreatedOnToolsVersion = 10.1;
 					};
 					05A15970228164360020880A = {
 						CreatedOnToolsVersion = 10.1;
+						SystemCapabilities = {
+							com.apple.HealthKit.watchos = {
+								enabled = 1;
+							};
+						};
 					};
 				};
 			};
@@ -298,10 +328,10 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				0B0FAE582281B86E00B21328 /* ListOfActivities.storyboard in Resources */,
 				05A1596B228164360020880A /* Assets.xcassets in Resources */,
 				162734812281774A00A26696 /* Ring.storyboard in Resources */,
 				05A15969228164350020880A /* Interface.storyboard in Resources */,
+				926AC2162281774100A1145F /* HeartRate.storyboard in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -331,13 +361,13 @@
 			files = (
 				05A1597B228164360020880A /* NotificationController.swift in Sources */,
 				05A1597D228164360020880A /* ComplicationController.swift in Sources */,
+				926AC214228175D800A1145F /* HeartRateInterfaceController.swift in Sources */,
 				05A15979228164360020880A /* ExtensionDelegate.swift in Sources */,
 				05A15977228164360020880A /* InterfaceController.swift in Sources */,
 				16273483228179D000A26696 /* RingInterfaceController.swift in Sources */,
 				05298F6C2281AC4F0076B225 /* RowController.swift in Sources */,
 				055E3CA52281A42300431F33 /* IntervalListInterfaceController.swift in Sources */,
 				05298F6E2281AEE20076B225 /* HeaderController.swift in Sources */,
-				0B0FAE562281B72500B21328 /* ListOfActivitiesController.swift in Sources */,
 				055E3CA322817AA100431F33 /* PausableTimer.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
