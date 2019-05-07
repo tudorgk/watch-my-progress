@@ -20,7 +20,7 @@ class ListOfActivitiesController: WKInterfaceController {
     let rowTypes = [HeaderController.type, HeaderController.type]
     var headlines = [
         Headline( title: "Timer"),
-        Headline( title: "Activity"),
+        Headline( title: "Activity")
     ]
 
     override func awake(withContext context: Any?) {
