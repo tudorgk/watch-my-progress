@@ -42,7 +42,7 @@ class ListOfActivitiesController: WKInterfaceController {
         case 0:
             self.pushController(withName: "addTimeInterval", context: nil)
         case 1:
-            self.pushController(withName: "graph", context: nil)
+            self.pushController(withName: "HeartRateController", context: nil)
         default:
             self.pushController(withName: "RingInterfaceController", context: nil)
             

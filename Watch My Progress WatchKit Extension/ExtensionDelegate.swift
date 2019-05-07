@@ -11,9 +11,6 @@ import WatchKit
 class ExtensionDelegate: NSObject, WKExtensionDelegate {
 
     func applicationDidFinishLaunching() {
-        let rootControllerIdentifier = "HeartRateController"
-        WKInterfaceController.reloadRootControllers(withNamesAndContexts: [(name: rootControllerIdentifier, context: [:] as AnyObject)])
-
     }
 
     func applicationDidBecomeActive() {
