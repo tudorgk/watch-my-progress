@@ -54,23 +54,20 @@ class ExtensionDelegate: NSObject, WKExtensionDelegate {
 
     // Triggered when a complication is tapped
     func handleUserActivity(_ userInfo: [AnyHashable : Any]?) {
-        var rootControllerIdentifier = "RingInterfaceController"
-        var context: AnyObject = [:] as AnyObject
-        if let date = userInfo?[CLKLaunchedTimelineEntryDateKey] as? Date {
-            // We now know the app was definitely
-            // launched by tapping the complication
-            if let type = date.complicationTypeFromEncodedDate {
-                switch type {
-                case .small1:
-                    rootControllerIdentifier = "addTimeInterval"
-                    context = ["action": "checkIn"] as AnyObject
-                default: break
-                }
-            }
-        } else {
-            print("No date")
+        guard
+            let date = userInfo?[CLKLaunchedTimelineEntryDateKey] as? Date,
+            let type = date.complicationTypeFromEncodedDate
+            else {
+                return
         }
-        WKInterfaceController.reloadRootControllers(withNamesAndContexts: [(name: rootControllerIdentifier, context: context)])
+        switch type {
+        case .small1:
+            WKInterfaceController.reloadRootControllers(
+                withNamesAndContexts: [(name: "addTimeInterval", context: ["action": "checkIn"] as AnyObject)])
+        default:
+            WKInterfaceController.reloadRootControllers(withNamesAndContexts: [(name: "test1234", context: [] as AnyObject)])
+        }
+
     }
 }
 
