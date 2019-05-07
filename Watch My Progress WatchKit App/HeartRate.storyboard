@@ -1,0 +1,35 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder.WatchKit.Storyboard" version="3.0" toolsVersion="14490.70" targetRuntime="watchKit" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" colorMatched="YES">
+    <device id="watch38" orientation="portrait">
+        <adaptation id="fullscreen"/>
+    </device>
+    <dependencies>
+        <deployment identifier="watchOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="14490.49"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBWatchKitPlugin" version="14490.21"/>
+    </dependencies>
+    <scenes>
+        <!--HeartRateController-->
+        <scene sceneID="0Xz-Xd-X5D">
+            <objects>
+                <controller identifier="HeartRateController" id="Wzc-9X-WdA" customClass="HeartRateInterfaceController" customModule="Watch_My_Progress_WatchKit_Extension">
+                    <items>
+                        <label alignment="left" text="Label" textAlignment="left" numberOfLines="0" id="lD5-Yc-jjm">
+                            <color key="textColor" red="1" green="0.14913141730000001" blue="0.0" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                        </label>
+                        <button width="1" alignment="center" verticalAlignment="bottom" title="Button" id="scI-YW-ULj">
+                            <connections>
+                                <action selector="buttonPressed" destination="Wzc-9X-WdA" id="T3f-AX-L4W"/>
+                            </connections>
+                        </button>
+                    </items>
+                    <connections>
+                        <outlet property="button" destination="scI-YW-ULj" id="Bzd-iv-Ti6"/>
+                        <outlet property="label" destination="lD5-Yc-jjm" id="LwT-yl-49n"/>
+                    </connections>
+                </controller>
+            </objects>
+            <point key="canvasLocation" x="61" y="37"/>
+        </scene>
+    </scenes>
+</document>
