@@ -9,7 +9,7 @@
 import Foundation
 
 public protocol PausableTimerDelegate: class {
-    func timerStopped(PausableTimer: PausableTimer)
+    func timerStopped(interval: TimeInterval)
     func elapsedTime(interval: TimeInterval)
 }
 
@@ -74,7 +74,7 @@ public class PausableTimer {
     
     
     private func timerCompleted() {
-        delegate?.timerStopped(PausableTimer: self)
+        delegate?.timerStopped(interval: timeElapsed)
         if !repeats {
             terminateTimer()
         }

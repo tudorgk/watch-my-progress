@@ -15,11 +15,12 @@ class IntervalListInterfaceController: WKInterfaceController {
         popToRootController()
     }
     
-    let rowTypes = [HeaderController.type, RowController.type, RowController.type, HeaderController.type, RowController.type]
-    let rowDataSource = ["Mobile Meetup Hackathon", "10 sec", "10 min", "Boringc Project", "59 min 2 sec"]
+//    let rowTypes = [HeaderController.type, RowController.type, RowController.type, HeaderController.type, RowController.type]
+//    let rowDataSource = ["Mobile Meetup Hackathon", "10 sec", "10 min", "Boringc Project", "59 min 2 sec"]
     override func awake(withContext context: Any?) {
         super.awake(withContext: context)
         
+        let (rowTypes, rowDataSource) = getTimeIntervalsFromUserDefaults()
         timerTable.setRowTypes(rowTypes)
         for (index, element) in rowTypes.enumerated() {
             if element == HeaderController.type {
@@ -32,8 +33,28 @@ class IntervalListInterfaceController: WKInterfaceController {
         }
     }
     
-    override func willActivate(){
-        super.willActivate()
+    let timerForamtter : DateComponentsFormatter = {
+        var dcf = DateComponentsFormatter()
+        dcf.unitsStyle = .short
+        return dcf
+    }()
     
+    fileprivate func generateListForKey(_ key: String, _ list: inout [String], _ rowTypes: inout [String]) {
+        if let array = UserDefaults.standard.array(forKey: key) as? [Double] {
+            list.append(key)
+            rowTypes.append(HeaderController.type)
+            for value in array{
+                list.append(timerForamtter.string(from: value) as! String)
+                rowTypes.append(RowController.type)
+            }
+        }
+    }
+    
+    func getTimeIntervalsFromUserDefaults() -> ([String], [String]) {
+        var rowTypes: [String] = []
+        var list: [String] = []
+        generateListForKey("Mobile Meetup Hackathon", &list, &rowTypes)
+        generateListForKey("Boring Project", &list, &rowTypes)
+        return (rowTypes, list)
     }
 }
