@@ -16,7 +16,7 @@ class InterfaceController: WKInterfaceController {
     
     @IBOutlet weak var stopButton: WKInterfaceButton!
 
-    var myTimer : Timer?  //internal timer to keep track
+    var trackingTimer : Timer?  //internal timer to keep track
     var isPaused = false //flag to determine if it is paused or not
     var firstStart = false
     
@@ -34,8 +34,10 @@ class InterfaceController: WKInterfaceController {
     @IBAction func pauseResumePressed() {
         if !firstStart {
             mainTimer.setDate(Date())
+            trackingTimer.
             mainTimer.start()
             firstStart = true
+            startPauseButton.setTitle("Pause")
             return
             
         }
@@ -57,6 +59,14 @@ class InterfaceController: WKInterfaceController {
             //do whatever UI changes you need to
             startPauseButton.setTitle("Resume")
         }
+    }
+    
+    @IBAction func stopButtonTapped() {
+        mainTimer.stop()
+        mainTimer.setDate(Date())
+        firstStart = false
+        startPauseButton.setTitle("Start")
+        //TODO: Show action sheet to save the timer.
     }
     
     @objc func timerDone(){

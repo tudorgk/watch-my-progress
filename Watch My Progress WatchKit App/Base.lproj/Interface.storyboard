@@ -30,7 +30,7 @@
                                 </button>
                                 <button width="0.5" height="0.5" alignment="right" verticalAlignment="bottom" title="Stop" id="ZZ7-UB-C8x">
                                     <connections>
-                                        <action selector="stopTimer" destination="AgC-eL-Hgc" id="54Y-O5-D4k"/>
+                                        <action selector="stopButtonTapped" destination="AgC-eL-Hgc" id="89X-oS-wLz"/>
                                     </connections>
                                 </button>
                             </items>
