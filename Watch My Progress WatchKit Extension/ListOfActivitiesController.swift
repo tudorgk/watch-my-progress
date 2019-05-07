@@ -19,8 +19,8 @@ class ListOfActivitiesController: WKInterfaceController {
     
     let rowTypes = [HeaderController.type, HeaderController.type]
     var headlines = [
-        Headline( title: "Stop watch"),
-        Headline( title: "Statistics"),
+        Headline( title: "Timer"),
+        Headline( title: "Activity"),
     ]
 
     override func awake(withContext context: Any?) {
