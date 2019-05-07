@@ -26,6 +26,9 @@
 		05A1597B228164360020880A /* NotificationController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 05A1597A228164360020880A /* NotificationController.swift */; };
 		05A1597D228164360020880A /* ComplicationController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 05A1597C228164360020880A /* ComplicationController.swift */; };
 		05A1597F228164370020880A /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 05A1597E228164370020880A /* Assets.xcassets */; };
+		0B0D10482281C41400DF25E6 /* ListOfActivities.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 0B0D10472281C41400DF25E6 /* ListOfActivities.storyboard */; };
+		0B0D104A2281C45800DF25E6 /* ListOfActivitiesController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0B0D10492281C45800DF25E6 /* ListOfActivitiesController.swift */; };
+		0B0D104C2281CE1C00DF25E6 /* List.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 0B0D104B2281CE1C00DF25E6 /* List.storyboard */; };
 		162734812281774A00A26696 /* Ring.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 162734802281774A00A26696 /* Ring.storyboard */; };
 		16273483228179D000A26696 /* RingInterfaceController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 16273482228179D000A26696 /* RingInterfaceController.swift */; };
 		1E3B8B8EA212021771C5F339 /* Pods_Watch_My_Progress.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 66986D32A8DA66BC35C75D84 /* Pods_Watch_My_Progress.framework */; };
@@ -103,6 +106,9 @@
 		05A1597E228164370020880A /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		05A15980228164370020880A /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		05A15981228164370020880A /* PushNotificationPayload.apns */ = {isa = PBXFileReference; lastKnownFileType = text; path = PushNotificationPayload.apns; sourceTree = "<group>"; };
+		0B0D10472281C41400DF25E6 /* ListOfActivities.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; path = ListOfActivities.storyboard; sourceTree = "<group>"; };
+		0B0D10492281C45800DF25E6 /* ListOfActivitiesController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ListOfActivitiesController.swift; sourceTree = "<group>"; };
+		0B0D104B2281CE1C00DF25E6 /* List.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = List.storyboard; sourceTree = "<group>"; };
 		0990B721E21B7D032DAA5808 /* libPods-Watch My Progress WatchKit App.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = "libPods-Watch My Progress WatchKit App.a"; sourceTree = BUILT_PRODUCTS_DIR; };
 		162734802281774A00A26696 /* Ring.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = Ring.storyboard; sourceTree = "<group>"; };
 		16273482228179D000A26696 /* RingInterfaceController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RingInterfaceController.swift; sourceTree = "<group>"; };
@@ -194,7 +200,9 @@
 				05A1596A228164360020880A /* Assets.xcassets */,
 				05A1596C228164360020880A /* Info.plist */,
 				162734802281774A00A26696 /* Ring.storyboard */,
+				0B0D10472281C41400DF25E6 /* ListOfActivities.storyboard */,
 				926AC2152281774100A1145F /* HeartRate.storyboard */,
+				0B0D104B2281CE1C00DF25E6 /* List.storyboard */,
 			);
 			path = "Watch My Progress WatchKit App";
 			sourceTree = "<group>";
@@ -215,6 +223,7 @@
 				055E3CA222817AA100431F33 /* PausableTimer.swift */,
 				055E3CA42281A42300431F33 /* IntervalListInterfaceController.swift */,
 				05298F6B2281AC4F0076B225 /* RowController.swift */,
+				0B0D10492281C45800DF25E6 /* ListOfActivitiesController.swift */,
 				05298F6D2281AEE20076B225 /* HeaderController.swift */,
 			);
 			path = "Watch My Progress WatchKit Extension";
@@ -377,6 +386,8 @@
 				162734812281774A00A26696 /* Ring.storyboard in Resources */,
 				05A15969228164350020880A /* Interface.storyboard in Resources */,
 				926AC2162281774100A1145F /* HeartRate.storyboard in Resources */,
+				0B0D104C2281CE1C00DF25E6 /* List.storyboard in Resources */,
+				0B0D10482281C41400DF25E6 /* ListOfActivities.storyboard in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -503,6 +514,7 @@
 				16273483228179D000A26696 /* RingInterfaceController.swift in Sources */,
 				05298F6C2281AC4F0076B225 /* RowController.swift in Sources */,
 				055E3CA52281A42300431F33 /* IntervalListInterfaceController.swift in Sources */,
+				0B0D104A2281C45800DF25E6 /* ListOfActivitiesController.swift in Sources */,
 				05298F6E2281AEE20076B225 /* HeaderController.swift in Sources */,
 				055E3CA322817AA100431F33 /* PausableTimer.swift in Sources */,
 			);

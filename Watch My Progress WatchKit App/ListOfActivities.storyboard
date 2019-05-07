@@ -9,19 +9,25 @@
         <plugIn identifier="com.apple.InterfaceBuilder.IBWatchKitPlugin" version="14490.21"/>
     </dependencies>
     <scenes>
-        <!--RingInterfaceController2-->
-        <scene sceneID="DM2-W9-gEv">
+        <!--List-->
+        <scene sceneID="Af7-Kx-0c7">
             <objects>
-                <controller identifier="RingInterfaceController2" spacing="0.0" fullBounds="YES" id="U62-T8-TRC" customClass="RingInterfaceController" customModule="Watch_My_Progress_WatchKit_Extension">
+                <controller identifier="List" id="vQV-T3-VV9" customClass="ListOfActivitiesController">
                     <items>
-                        <imageView width="1" height="1" alignment="center" verticalAlignment="center" contentMode="scaleAspectFit" id="ggz-6P-PJT"/>
+                        <table alignment="left" id="Yjk-K6-I0w">
+                            <items>
+                                <tableRow identifier="Header" id="jux-9a-6EE" customClass="HeaderController" customModule="Watch_My_Progress_WatchKit_App" customModuleProvider="target">
+                                    <group key="rootItem" width="1" alignment="left" id="smy-1o-sPN"/>
+                                </tableRow>
+                            </items>
+                        </table>
                     </items>
                     <connections>
-                        <outlet property="image" destination="ggz-6P-PJT" id="XKo-2j-K2i"/>
+                        <outlet property="listOfActivitiesTable" destination="Yjk-K6-I0w" id="pzZ-W0-qOa"/>
                     </connections>
                 </controller>
             </objects>
-            <point key="canvasLocation" x="-641" y="10"/>
+            <point key="canvasLocation" x="-2274" y="-2135"/>
         </scene>
     </scenes>
 </document>
