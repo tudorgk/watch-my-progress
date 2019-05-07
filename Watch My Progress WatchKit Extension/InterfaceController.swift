@@ -30,7 +30,7 @@ class InterfaceController: WKInterfaceController {
     @IBAction func pauseResumePressed() {
         if !isStarted {
             mainTimer.start()
-            break
+            return
             
         }
         
