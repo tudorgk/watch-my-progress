@@ -11,21 +11,51 @@ import Foundation
 
 
 class InterfaceController: WKInterfaceController {
+    @IBOutlet weak var mainTimer: WKInterfaceTimer!
+    @IBOutlet weak var startPauseButton: WKInterfaceButton!
+    
+    @IBOutlet weak var stopButton: WKInterfaceButton!
 
-    override func awake(withContext context: Any?) {
-        super.awake(withContext: context)
-        
-        // Configure interface objects here.
-    }
+    var myTimer : Timer?  //internal timer to keep track
+    var isPaused = false //flag to determine if it is paused or not
+    var isStarted = false
     
-    override func willActivate() {
-        // This method is called when watch view controller is about to be visible to user
+    override func willActivate(){
         super.willActivate()
+    
+        mainTimer.setDate(Date())
+        
     }
     
-    override func didDeactivate() {
-        // This method is called when watch view controller is no longer visible
-        super.didDeactivate()
+    @IBAction func pauseResumePressed() {
+        if !isStarted {
+            mainTimer.start()
+            break
+            
+        }
+        
+        //timer is paused. so unpause it and resume countdown
+        if isPaused{
+            isPaused = false
+            mainTimer.start()
+            
+            startPauseButton.setTitle("Pause")
+        }
+            //pause the timer
+        else{
+            isPaused = true
+        
+            //stop watchkit timer on the screen
+            mainTimer.stop()
+            
+            //do whatever UI changes you need to
+            startPauseButton.setTitle("Resume")
+        }
     }
+    
+    @objc func timerDone(){
+        //timer done counting down
+    }
+    
 
 }
