@@ -11,5 +11,7 @@ import WatchKit
 
 class RowController : NSObject {
     
+    public static let type : String = "Row"
+    
     @IBOutlet weak var titleLabel: WKInterfaceLabel!
 }
