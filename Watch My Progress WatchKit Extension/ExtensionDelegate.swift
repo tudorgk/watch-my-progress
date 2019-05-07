@@ -65,7 +65,8 @@ class ExtensionDelegate: NSObject, WKExtensionDelegate {
             WKInterfaceController.reloadRootControllers(
                 withNamesAndContexts: [(name: "addTimeInterval", context: ["action": "checkIn"] as AnyObject)])
         default:
-            WKInterfaceController.reloadRootControllers(withNamesAndContexts: [(name: "test1234", context: [] as AnyObject)])
+            WKInterfaceController.reloadRootControllers(withNamesAndContexts: [(name: "HeartRateController",
+                                                                                context: [] as AnyObject)])
         }
 
     }
