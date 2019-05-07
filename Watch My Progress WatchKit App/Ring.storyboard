@@ -9,10 +9,10 @@
         <plugIn identifier="com.apple.InterfaceBuilder.IBWatchKitPlugin" version="14490.21"/>
     </dependencies>
     <scenes>
-        <!--RingInterfaceController-->
+        <!--RingInterfaceController2-->
         <scene sceneID="DM2-W9-gEv">
             <objects>
-                <controller identifier="RingInterfaceController" spacing="0.0" fullBounds="YES" id="U62-T8-TRC" customClass="RingInterfaceController" customModule="Watch_My_Progress_WatchKit_Extension">
+                <controller identifier="RingInterfaceController2" spacing="0.0" fullBounds="YES" id="U62-T8-TRC" customClass="RingInterfaceController" customModule="Watch_My_Progress_WatchKit_Extension">
                     <items>
                         <imageView width="1" height="1" alignment="center" verticalAlignment="center" contentMode="scaleAspectFit" id="ggz-6P-PJT"/>
                     </items>

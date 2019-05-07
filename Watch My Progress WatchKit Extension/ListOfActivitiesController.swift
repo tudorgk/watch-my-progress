@@ -17,10 +17,11 @@ class ListOfActivitiesController: WKInterfaceController {
     @IBOutlet weak var listOfActivitiesTable: WKInterfaceTable!
     
     
-    let rowTypes = [HeaderController.type, HeaderController.type]
+    let rowTypes = [HeaderController.type, HeaderController.type, HeaderController.type]
     var headlines = [
         Headline( title: "Timer"),
-        Headline( title: "Activity")
+        Headline( title: "Activity"),
+        Headline(title: "Invoices")
     ]
 
     override func awake(withContext context: Any?) {
@@ -37,10 +38,14 @@ class ListOfActivitiesController: WKInterfaceController {
     }
     
     override func table(_ table: WKInterfaceTable, didSelectRowAt rowIndex: Int) {
-        if rowIndex == 0 {
+        switch rowIndex {
+        case 0:
             self.pushController(withName: "addTimeInterval", context: nil)
-        } else {
+        case 1:
             self.pushController(withName: "graph", context: nil)
+        default:
+            self.pushController(withName: "RingInterfaceController", context: nil)
+            
         }
     }
 }

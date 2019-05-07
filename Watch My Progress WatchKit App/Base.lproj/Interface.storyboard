@@ -188,5 +188,19 @@
             </objects>
             <point key="canvasLocation" x="-195" y="49"/>
         </scene>
+        <!--RingInterfaceController-->
+        <scene sceneID="SQ5-Iv-gWU">
+            <objects>
+                <controller identifier="RingInterfaceController" spacing="0.0" fullBounds="YES" id="6yR-3x-NIp" customClass="RingInterfaceController" customModule="Watch_My_Progress_WatchKit_Extension">
+                    <items>
+                        <imageView width="1" height="1" alignment="center" verticalAlignment="center" contentMode="scaleAspectFit" id="ID2-G7-sdc"/>
+                    </items>
+                    <connections>
+                        <outlet property="image" destination="ID2-G7-sdc" id="RfN-Hf-iId"/>
+                    </connections>
+                </controller>
+            </objects>
+            <point key="canvasLocation" x="-641" y="10"/>
+        </scene>
     </scenes>
 </document>
