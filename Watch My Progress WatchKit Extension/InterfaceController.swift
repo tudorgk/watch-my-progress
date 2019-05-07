@@ -34,10 +34,7 @@ class InterfaceController: WKInterfaceController {
     @IBAction func pauseResumePressed() {
         if !firstStart {
             mainTimer.setDate(Date())
-            trackingTimer = Timer.scheduledTimer(withTimeInterval: 1.0, repeats: true, block: { timer in
-                print(timer.fireDate.debugDescription)
-            })
-            isPaused = true
+            trackingTimer.
             mainTimer.start()
             firstStart = true
             startPauseButton.setTitle("Pause")
@@ -49,7 +46,6 @@ class InterfaceController: WKInterfaceController {
         if isPaused{
             isPaused = false
             mainTimer.start()
-            trackingTimer?.fire()
             
             startPauseButton.setTitle("Pause")
         }
@@ -59,7 +55,6 @@ class InterfaceController: WKInterfaceController {
         
             //stop watchkit timer on the screen
             mainTimer.stop()
-            trackingTimer?.invalidate()
             
             //do whatever UI changes you need to
             startPauseButton.setTitle("Resume")
