@@ -11,6 +11,10 @@ import ClockKit
 
 class ComplicationController: NSObject, CLKComplicationDataSource {
     
+    
+    let HOUR: TimeInterval = 60 * 60
+    let MINUTE: TimeInterval = 60
+    
     // MARK: - Timeline Configuration
     
     func getSupportedTimeTravelDirections(for complication: CLKComplication, withHandler handler: @escaping (CLKComplicationTimeTravelDirections) -> Void) {
@@ -31,9 +35,49 @@ class ComplicationController: NSObject, CLKComplicationDataSource {
     
     // MARK: - Timeline Population
     
-    func getCurrentTimelineEntry(for complication: CLKComplication, withHandler handler: @escaping (CLKComplicationTimelineEntry?) -> Void) {
-        // Call the handler with the current timeline entry
-        handler(nil)
+    func getCurrentTimelineEntry(for complication: CLKComplication, withHandler handler: @escaping ((CLKComplicationTimelineEntry?) -> Void)) {
+        // Get the complication data from the extension delegate.
+        
+        var entry : CLKComplicationTimelineEntry?
+        var template : CLKComplicationTemplate?
+        let now = NSDate()
+        
+        // Create the template and timeline entry.
+        if complication.family == .modularSmall {
+            let firstText = "test"
+            let shortText = "2344"
+            
+            let textTemplate = CLKComplicationTemplateModularSmallStackImage()
+            
+            textTemplate.line1ImageProvider = CLKImageProvider(onePieceImage: UIImage(named: "happy")!)
+            textTemplate.line2TextProvider = CLKSimpleTextProvider(text: firstText,
+                                                                   shortText: shortText)
+            
+           
+            template = textTemplate
+        }
+        else  if complication.family == .modularLarge{
+          
+            let modularLargeTemplate =
+                CLKComplicationTemplateModularLargeStandardBody()
+            modularLargeTemplate.headerImageProvider = CLKImageProvider(onePieceImage: UIImage(named: "happy")!)
+            modularLargeTemplate.headerTextProvider =
+                CLKSimpleTextProvider(text: "Watch my progress",
+                                    shortText: "Watch my progress")
+            modularLargeTemplate.body1TextProvider =
+                CLKSimpleTextProvider(text: "Invoice",
+                                      shortText: "90 332")
+            modularLargeTemplate.body2TextProvider =
+                CLKSimpleTextProvider(text: "Stop watch",
+                                      shortText: "10 minutes 23 second")
+            
+           
+            template = modularLargeTemplate
+        }
+        
+        // Pass the timeline entry back to ClockKit.
+        handler(CLKComplicationTimelineEntry(date: now as Date, complicationTemplate: template!))
+
     }
     
     func getTimelineEntries(for complication: CLKComplication, before date: Date, limit: Int, withHandler handler: @escaping ([CLKComplicationTimelineEntry]?) -> Void) {
@@ -50,6 +94,9 @@ class ComplicationController: NSObject, CLKComplicationDataSource {
     
     func getLocalizableSampleTemplate(for complication: CLKComplication, withHandler handler: @escaping (CLKComplicationTemplate?) -> Void) {
         // This method will be called once per supported complication, and the results will be cached
+
+
+        
         handler(nil)
     }
     
