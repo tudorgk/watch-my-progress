@@ -1,0 +1,632 @@
+// !$*UTF8*$!
+{
+	archiveVersion = 1;
+	classes = {
+	};
+	objectVersion = 50;
+	objects = {
+
+/* Begin PBXBuildFile section */
+		05A15954228164340020880A /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 05A15953228164340020880A /* AppDelegate.swift */; };
+		05A15956228164340020880A /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 05A15955228164340020880A /* ViewController.swift */; };
+		05A15959228164340020880A /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 05A15957228164340020880A /* Main.storyboard */; };
+		05A1595B228164350020880A /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 05A1595A228164350020880A /* Assets.xcassets */; };
+		05A1595E228164350020880A /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 05A1595C228164350020880A /* LaunchScreen.storyboard */; };
+		05A15963228164350020880A /* Watch My Progress WatchKit App.app in Embed Watch Content */ = {isa = PBXBuildFile; fileRef = 05A15962228164350020880A /* Watch My Progress WatchKit App.app */; };
+		05A15969228164350020880A /* Interface.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 05A15967228164350020880A /* Interface.storyboard */; };
+		05A1596B228164360020880A /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 05A1596A228164360020880A /* Assets.xcassets */; };
+		05A15972228164360020880A /* Watch My Progress WatchKit Extension.appex in Embed App Extensions */ = {isa = PBXBuildFile; fileRef = 05A15971228164360020880A /* Watch My Progress WatchKit Extension.appex */; settings = {ATTRIBUTES = (RemoveHeadersOnCopy, ); }; };
+		05A15977228164360020880A /* InterfaceController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 05A15976228164360020880A /* InterfaceController.swift */; };
+		05A15979228164360020880A /* ExtensionDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 05A15978228164360020880A /* ExtensionDelegate.swift */; };
+		05A1597B228164360020880A /* NotificationController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 05A1597A228164360020880A /* NotificationController.swift */; };
+		05A1597D228164360020880A /* ComplicationController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 05A1597C228164360020880A /* ComplicationController.swift */; };
+		05A1597F228164370020880A /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 05A1597E228164370020880A /* Assets.xcassets */; };
+/* End PBXBuildFile section */
+
+/* Begin PBXContainerItemProxy section */
+		05A15964228164350020880A /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 05A15948228164340020880A /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = 05A15961228164350020880A;
+			remoteInfo = "Watch My Progress WatchKit App";
+		};
+		05A15973228164360020880A /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 05A15948228164340020880A /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = 05A15970228164360020880A;
+			remoteInfo = "Watch My Progress WatchKit Extension";
+		};
+/* End PBXContainerItemProxy section */
+
+/* Begin PBXCopyFilesBuildPhase section */
+		05A15987228164370020880A /* Embed App Extensions */ = {
+			isa = PBXCopyFilesBuildPhase;
+			buildActionMask = 2147483647;
+			dstPath = "";
+			dstSubfolderSpec = 13;
+			files = (
+				05A15972228164360020880A /* Watch My Progress WatchKit Extension.appex in Embed App Extensions */,
+			);
+			name = "Embed App Extensions";
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		05A1598B228164370020880A /* Embed Watch Content */ = {
+			isa = PBXCopyFilesBuildPhase;
+			buildActionMask = 2147483647;
+			dstPath = "$(CONTENTS_FOLDER_PATH)/Watch";
+			dstSubfolderSpec = 16;
+			files = (
+				05A15963228164350020880A /* Watch My Progress WatchKit App.app in Embed Watch Content */,
+			);
+			name = "Embed Watch Content";
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXCopyFilesBuildPhase section */
+
+/* Begin PBXFileReference section */
+		05A15950228164340020880A /* Watch My Progress.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "Watch My Progress.app"; sourceTree = BUILT_PRODUCTS_DIR; };
+		05A15953228164340020880A /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
+		05A15955228164340020880A /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
+		05A15958228164340020880A /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
+		05A1595A228164350020880A /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
+		05A1595D228164350020880A /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
+		05A1595F228164350020880A /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		05A15962228164350020880A /* Watch My Progress WatchKit App.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "Watch My Progress WatchKit App.app"; sourceTree = BUILT_PRODUCTS_DIR; };
+		05A15968228164350020880A /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Interface.storyboard; sourceTree = "<group>"; };
+		05A1596A228164360020880A /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
+		05A1596C228164360020880A /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		05A15971228164360020880A /* Watch My Progress WatchKit Extension.appex */ = {isa = PBXFileReference; explicitFileType = "wrapper.app-extension"; includeInIndex = 0; path = "Watch My Progress WatchKit Extension.appex"; sourceTree = BUILT_PRODUCTS_DIR; };
+		05A15976228164360020880A /* InterfaceController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = InterfaceController.swift; sourceTree = "<group>"; };
+		05A15978228164360020880A /* ExtensionDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ExtensionDelegate.swift; sourceTree = "<group>"; };
+		05A1597A228164360020880A /* NotificationController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NotificationController.swift; sourceTree = "<group>"; };
+		05A1597C228164360020880A /* ComplicationController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ComplicationController.swift; sourceTree = "<group>"; };
+		05A1597E228164370020880A /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
+		05A15980228164370020880A /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		05A15981228164370020880A /* PushNotificationPayload.apns */ = {isa = PBXFileReference; lastKnownFileType = text; path = PushNotificationPayload.apns; sourceTree = "<group>"; };
+/* End PBXFileReference section */
+
+/* Begin PBXFrameworksBuildPhase section */
+		05A1594D228164340020880A /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		05A1596E228164360020880A /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXFrameworksBuildPhase section */
+
+/* Begin PBXGroup section */
+		05A15947228164340020880A = {
+			isa = PBXGroup;
+			children = (
+				05A15952228164340020880A /* Watch My Progress */,
+				05A15966228164350020880A /* Watch My Progress WatchKit App */,
+				05A15975228164360020880A /* Watch My Progress WatchKit Extension */,
+				05A15951228164340020880A /* Products */,
+			);
+			sourceTree = "<group>";
+		};
+		05A15951228164340020880A /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				05A15950228164340020880A /* Watch My Progress.app */,
+				05A15962228164350020880A /* Watch My Progress WatchKit App.app */,
+				05A15971228164360020880A /* Watch My Progress WatchKit Extension.appex */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		05A15952228164340020880A /* Watch My Progress */ = {
+			isa = PBXGroup;
+			children = (
+				05A15953228164340020880A /* AppDelegate.swift */,
+				05A15955228164340020880A /* ViewController.swift */,
+				05A15957228164340020880A /* Main.storyboard */,
+				05A1595A228164350020880A /* Assets.xcassets */,
+				05A1595C228164350020880A /* LaunchScreen.storyboard */,
+				05A1595F228164350020880A /* Info.plist */,
+			);
+			path = "Watch My Progress";
+			sourceTree = "<group>";
+		};
+		05A15966228164350020880A /* Watch My Progress WatchKit App */ = {
+			isa = PBXGroup;
+			children = (
+				05A15967228164350020880A /* Interface.storyboard */,
+				05A1596A228164360020880A /* Assets.xcassets */,
+				05A1596C228164360020880A /* Info.plist */,
+			);
+			path = "Watch My Progress WatchKit App";
+			sourceTree = "<group>";
+		};
+		05A15975228164360020880A /* Watch My Progress WatchKit Extension */ = {
+			isa = PBXGroup;
+			children = (
+				05A15976228164360020880A /* InterfaceController.swift */,
+				05A15978228164360020880A /* ExtensionDelegate.swift */,
+				05A1597A228164360020880A /* NotificationController.swift */,
+				05A1597C228164360020880A /* ComplicationController.swift */,
+				05A1597E228164370020880A /* Assets.xcassets */,
+				05A15980228164370020880A /* Info.plist */,
+				05A15981228164370020880A /* PushNotificationPayload.apns */,
+			);
+			path = "Watch My Progress WatchKit Extension";
+			sourceTree = "<group>";
+		};
+/* End PBXGroup section */
+
+/* Begin PBXNativeTarget section */
+		05A1594F228164340020880A /* Watch My Progress */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 05A1598C228164370020880A /* Build configuration list for PBXNativeTarget "Watch My Progress" */;
+			buildPhases = (
+				05A1594C228164340020880A /* Sources */,
+				05A1594D228164340020880A /* Frameworks */,
+				05A1594E228164340020880A /* Resources */,
+				05A1598B228164370020880A /* Embed Watch Content */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				05A15965228164350020880A /* PBXTargetDependency */,
+			);
+			name = "Watch My Progress";
+			productName = "Watch My Progress";
+			productReference = 05A15950228164340020880A /* Watch My Progress.app */;
+			productType = "com.apple.product-type.application";
+		};
+		05A15961228164350020880A /* Watch My Progress WatchKit App */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 05A15988228164370020880A /* Build configuration list for PBXNativeTarget "Watch My Progress WatchKit App" */;
+			buildPhases = (
+				05A15960228164350020880A /* Resources */,
+				05A15987228164370020880A /* Embed App Extensions */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				05A15974228164360020880A /* PBXTargetDependency */,
+			);
+			name = "Watch My Progress WatchKit App";
+			productName = "Watch My Progress WatchKit App";
+			productReference = 05A15962228164350020880A /* Watch My Progress WatchKit App.app */;
+			productType = "com.apple.product-type.application.watchapp2";
+		};
+		05A15970228164360020880A /* Watch My Progress WatchKit Extension */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 05A15984228164370020880A /* Build configuration list for PBXNativeTarget "Watch My Progress WatchKit Extension" */;
+			buildPhases = (
+				05A1596D228164360020880A /* Sources */,
+				05A1596E228164360020880A /* Frameworks */,
+				05A1596F228164360020880A /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = "Watch My Progress WatchKit Extension";
+			productName = "Watch My Progress WatchKit Extension";
+			productReference = 05A15971228164360020880A /* Watch My Progress WatchKit Extension.appex */;
+			productType = "com.apple.product-type.watchkit2-extension";
+		};
+/* End PBXNativeTarget section */
+
+/* Begin PBXProject section */
+		05A15948228164340020880A /* Project object */ = {
+			isa = PBXProject;
+			attributes = {
+				LastSwiftUpdateCheck = 1010;
+				LastUpgradeCheck = 1010;
+				ORGANIZATIONNAME = "Watch My Progress";
+				TargetAttributes = {
+					05A1594F228164340020880A = {
+						CreatedOnToolsVersion = 10.1;
+					};
+					05A15961228164350020880A = {
+						CreatedOnToolsVersion = 10.1;
+					};
+					05A15970228164360020880A = {
+						CreatedOnToolsVersion = 10.1;
+					};
+				};
+			};
+			buildConfigurationList = 05A1594B228164340020880A /* Build configuration list for PBXProject "Watch My Progress" */;
+			compatibilityVersion = "Xcode 9.3";
+			developmentRegion = en;
+			hasScannedForEncodings = 0;
+			knownRegions = (
+				en,
+				Base,
+			);
+			mainGroup = 05A15947228164340020880A;
+			productRefGroup = 05A15951228164340020880A /* Products */;
+			projectDirPath = "";
+			projectRoot = "";
+			targets = (
+				05A1594F228164340020880A /* Watch My Progress */,
+				05A15961228164350020880A /* Watch My Progress WatchKit App */,
+				05A15970228164360020880A /* Watch My Progress WatchKit Extension */,
+			);
+		};
+/* End PBXProject section */
+
+/* Begin PBXResourcesBuildPhase section */
+		05A1594E228164340020880A /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				05A1595E228164350020880A /* LaunchScreen.storyboard in Resources */,
+				05A1595B228164350020880A /* Assets.xcassets in Resources */,
+				05A15959228164340020880A /* Main.storyboard in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		05A15960228164350020880A /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				05A1596B228164360020880A /* Assets.xcassets in Resources */,
+				05A15969228164350020880A /* Interface.storyboard in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		05A1596F228164360020880A /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				05A1597F228164370020880A /* Assets.xcassets in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXResourcesBuildPhase section */
+
+/* Begin PBXSourcesBuildPhase section */
+		05A1594C228164340020880A /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				05A15956228164340020880A /* ViewController.swift in Sources */,
+				05A15954228164340020880A /* AppDelegate.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		05A1596D228164360020880A /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				05A1597B228164360020880A /* NotificationController.swift in Sources */,
+				05A1597D228164360020880A /* ComplicationController.swift in Sources */,
+				05A15979228164360020880A /* ExtensionDelegate.swift in Sources */,
+				05A15977228164360020880A /* InterfaceController.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXSourcesBuildPhase section */
+
+/* Begin PBXTargetDependency section */
+		05A15965228164350020880A /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = 05A15961228164350020880A /* Watch My Progress WatchKit App */;
+			targetProxy = 05A15964228164350020880A /* PBXContainerItemProxy */;
+		};
+		05A15974228164360020880A /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = 05A15970228164360020880A /* Watch My Progress WatchKit Extension */;
+			targetProxy = 05A15973228164360020880A /* PBXContainerItemProxy */;
+		};
+/* End PBXTargetDependency section */
+
+/* Begin PBXVariantGroup section */
+		05A15957228164340020880A /* Main.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				05A15958228164340020880A /* Base */,
+			);
+			name = Main.storyboard;
+			sourceTree = "<group>";
+		};
+		05A1595C228164350020880A /* LaunchScreen.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				05A1595D228164350020880A /* Base */,
+			);
+			name = LaunchScreen.storyboard;
+			sourceTree = "<group>";
+		};
+		05A15967228164350020880A /* Interface.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				05A15968228164350020880A /* Base */,
+			);
+			name = Interface.storyboard;
+			sourceTree = "<group>";
+		};
+/* End PBXVariantGroup section */
+
+/* Begin XCBuildConfiguration section */
+		05A15982228164370020880A /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++14";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_ENABLE_OBJC_WEAK = YES;
+				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_COMMA = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DEPRECATED_OBJC_IMPLEMENTATIONS = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = YES;
+				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
+				CLANG_WARN_STRICT_PROTOTYPES = YES;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				CODE_SIGN_IDENTITY = "iPhone Developer";
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = dwarf;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				ENABLE_TESTABILITY = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu11;
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 12.1;
+				MTL_ENABLE_DEBUG_INFO = INCLUDE_SOURCE;
+				MTL_FAST_MATH = YES;
+				ONLY_ACTIVE_ARCH = YES;
+				SDKROOT = iphoneos;
+				SWIFT_ACTIVE_COMPILATION_CONDITIONS = DEBUG;
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
+			};
+			name = Debug;
+		};
+		05A15983228164370020880A /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++14";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_ENABLE_OBJC_WEAK = YES;
+				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_COMMA = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DEPRECATED_OBJC_IMPLEMENTATIONS = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = YES;
+				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
+				CLANG_WARN_STRICT_PROTOTYPES = YES;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				CODE_SIGN_IDENTITY = "iPhone Developer";
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
+				ENABLE_NS_ASSERTIONS = NO;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu11;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 12.1;
+				MTL_ENABLE_DEBUG_INFO = NO;
+				MTL_FAST_MATH = YES;
+				SDKROOT = iphoneos;
+				SWIFT_COMPILATION_MODE = wholemodule;
+				SWIFT_OPTIMIZATION_LEVEL = "-O";
+				VALIDATE_PRODUCT = YES;
+			};
+			name = Release;
+		};
+		05A15985228164370020880A /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_COMPLICATION_NAME = Complication;
+				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = 3S37KDJTPB;
+				INFOPLIST_FILE = "Watch My Progress WatchKit Extension/Info.plist";
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+					"@executable_path/../../Frameworks",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = "com.watch.my.progress.Watch-My-Progress.watchkitapp.watchkitextension";
+				PRODUCT_NAME = "${TARGET_NAME}";
+				SDKROOT = watchos;
+				SKIP_INSTALL = YES;
+				SWIFT_VERSION = 4.2;
+				TARGETED_DEVICE_FAMILY = 4;
+				WATCHOS_DEPLOYMENT_TARGET = 5.1;
+			};
+			name = Debug;
+		};
+		05A15986228164370020880A /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_COMPLICATION_NAME = Complication;
+				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = 3S37KDJTPB;
+				INFOPLIST_FILE = "Watch My Progress WatchKit Extension/Info.plist";
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+					"@executable_path/../../Frameworks",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = "com.watch.my.progress.Watch-My-Progress.watchkitapp.watchkitextension";
+				PRODUCT_NAME = "${TARGET_NAME}";
+				SDKROOT = watchos;
+				SKIP_INSTALL = YES;
+				SWIFT_VERSION = 4.2;
+				TARGETED_DEVICE_FAMILY = 4;
+				WATCHOS_DEPLOYMENT_TARGET = 5.1;
+			};
+			name = Release;
+		};
+		05A15989228164370020880A /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = 3S37KDJTPB;
+				IBSC_MODULE = Watch_My_Progress_WatchKit_Extension;
+				INFOPLIST_FILE = "Watch My Progress WatchKit App/Info.plist";
+				PRODUCT_BUNDLE_IDENTIFIER = "com.watch.my.progress.Watch-My-Progress.watchkitapp";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SDKROOT = watchos;
+				SKIP_INSTALL = YES;
+				SWIFT_VERSION = 4.2;
+				TARGETED_DEVICE_FAMILY = 4;
+				WATCHOS_DEPLOYMENT_TARGET = 5.1;
+			};
+			name = Debug;
+		};
+		05A1598A228164370020880A /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = 3S37KDJTPB;
+				IBSC_MODULE = Watch_My_Progress_WatchKit_Extension;
+				INFOPLIST_FILE = "Watch My Progress WatchKit App/Info.plist";
+				PRODUCT_BUNDLE_IDENTIFIER = "com.watch.my.progress.Watch-My-Progress.watchkitapp";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SDKROOT = watchos;
+				SKIP_INSTALL = YES;
+				SWIFT_VERSION = 4.2;
+				TARGETED_DEVICE_FAMILY = 4;
+				WATCHOS_DEPLOYMENT_TARGET = 5.1;
+			};
+			name = Release;
+		};
+		05A1598D228164370020880A /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = 3S37KDJTPB;
+				INFOPLIST_FILE = "Watch My Progress/Info.plist";
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = "com.watch.my.progress.Watch-My-Progress";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 4.2;
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Debug;
+		};
+		05A1598E228164370020880A /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = 3S37KDJTPB;
+				INFOPLIST_FILE = "Watch My Progress/Info.plist";
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = "com.watch.my.progress.Watch-My-Progress";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 4.2;
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Release;
+		};
+/* End XCBuildConfiguration section */
+
+/* Begin XCConfigurationList section */
+		05A1594B228164340020880A /* Build configuration list for PBXProject "Watch My Progress" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				05A15982228164370020880A /* Debug */,
+				05A15983228164370020880A /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		05A15984228164370020880A /* Build configuration list for PBXNativeTarget "Watch My Progress WatchKit Extension" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				05A15985228164370020880A /* Debug */,
+				05A15986228164370020880A /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		05A15988228164370020880A /* Build configuration list for PBXNativeTarget "Watch My Progress WatchKit App" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				05A15989228164370020880A /* Debug */,
+				05A1598A228164370020880A /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		05A1598C228164370020880A /* Build configuration list for PBXNativeTarget "Watch My Progress" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				05A1598D228164370020880A /* Debug */,
+				05A1598E228164370020880A /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+/* End XCConfigurationList section */
+	};
+	rootObject = 05A15948228164340020880A /* Project object */;
+}
