@@ -69,6 +69,21 @@ class InterfaceController: WKInterfaceController, PausableTimerDelegate {
         trackingTimer?.stop()
         trackingTimer = nil
     
+        presentAlert(
+            withTitle: "Save your progress?",
+            message: "Choose which project you want to save to",
+            preferredStyle: .actionSheet,
+            actions: [
+                WKAlertAction(title: "Mobile Meetup Hackathon", style: .default, handler: {
+                    self.dismiss()
+                }),
+                WKAlertAction(title: "Boring Project", style: .default, handler: {
+                    self.dismiss()
+                }),
+                WKAlertAction(title: "Cancel", style: .cancel, handler: {
+                    self.dismiss()
+                })
+            ])
     }
 
     
@@ -81,6 +96,7 @@ class InterfaceController: WKInterfaceController, PausableTimerDelegate {
     }()
     
     func elapsedTime(interval: TimeInterval) {
+        
         timerLabel.setText(timerForamtter.string(from: interval))
     }
 
