@@ -46,6 +46,11 @@
                                     <action selector="switchToListMenuItem" destination="AgC-eL-Hgc" id="dut-Is-u3o"/>
                                 </connections>
                             </menuItem>
+                            <menuItem title="Show graph" icon="info" id="FVR-hO-2x6">
+                                <connections>
+                                    <action selector="switchToGraph" destination="AgC-eL-Hgc" id="y13-Hv-zRw"/>
+                                </connections>
+                            </menuItem>
                         </items>
                     </menu>
                     <connections>
