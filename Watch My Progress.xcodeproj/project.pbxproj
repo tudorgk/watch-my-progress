@@ -7,7 +7,10 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		05298F6C2281AC4F0076B225 /* RowController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 05298F6B2281AC4F0076B225 /* RowController.swift */; };
+		05298F6E2281AEE20076B225 /* HeaderController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 05298F6D2281AEE20076B225 /* HeaderController.swift */; };
 		055E3CA322817AA100431F33 /* PausableTimer.swift in Sources */ = {isa = PBXBuildFile; fileRef = 055E3CA222817AA100431F33 /* PausableTimer.swift */; };
+		055E3CA52281A42300431F33 /* IntervalListInterfaceController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 055E3CA42281A42300431F33 /* IntervalListInterfaceController.swift */; };
 		05A15954228164340020880A /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 05A15953228164340020880A /* AppDelegate.swift */; };
 		05A15956228164340020880A /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 05A15955228164340020880A /* ViewController.swift */; };
 		05A15959228164340020880A /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 05A15957228164340020880A /* Main.storyboard */; };
@@ -67,7 +70,10 @@
 /* End PBXCopyFilesBuildPhase section */
 
 /* Begin PBXFileReference section */
+		05298F6B2281AC4F0076B225 /* RowController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RowController.swift; sourceTree = "<group>"; };
+		05298F6D2281AEE20076B225 /* HeaderController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HeaderController.swift; sourceTree = "<group>"; };
 		055E3CA222817AA100431F33 /* PausableTimer.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PausableTimer.swift; sourceTree = "<group>"; };
+		055E3CA42281A42300431F33 /* IntervalListInterfaceController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = IntervalListInterfaceController.swift; sourceTree = "<group>"; };
 		05A15950228164340020880A /* Watch My Progress.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "Watch My Progress.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		05A15953228164340020880A /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		05A15955228164340020880A /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
@@ -161,6 +167,9 @@
 				05A15980228164370020880A /* Info.plist */,
 				05A15981228164370020880A /* PushNotificationPayload.apns */,
 				055E3CA222817AA100431F33 /* PausableTimer.swift */,
+				055E3CA42281A42300431F33 /* IntervalListInterfaceController.swift */,
+				05298F6B2281AC4F0076B225 /* RowController.swift */,
+				05298F6D2281AEE20076B225 /* HeaderController.swift */,
 			);
 			path = "Watch My Progress WatchKit Extension";
 			sourceTree = "<group>";
@@ -310,6 +319,9 @@
 				05A1597D228164360020880A /* ComplicationController.swift in Sources */,
 				05A15979228164360020880A /* ExtensionDelegate.swift in Sources */,
 				05A15977228164360020880A /* InterfaceController.swift in Sources */,
+				05298F6C2281AC4F0076B225 /* RowController.swift in Sources */,
+				055E3CA52281A42300431F33 /* IntervalListInterfaceController.swift in Sources */,
+				05298F6E2281AEE20076B225 /* HeaderController.swift in Sources */,
 				055E3CA322817AA100431F33 /* PausableTimer.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

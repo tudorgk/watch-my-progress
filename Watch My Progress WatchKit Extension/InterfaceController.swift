@@ -91,8 +91,10 @@ class InterfaceController: WKInterfaceController, PausableTimerDelegate {
 //        timerLabel.setText(PausableTimer.timeElapsed.debugDescription)
     }
     
-    let timerForamtter = {
-       return DateComponentsFormatter()
+    let timerForamtter : DateComponentsFormatter = {
+        var dcf = DateComponentsFormatter()
+        dcf.unitsStyle = .short
+        return dcf
     }()
     
     func elapsedTime(interval: TimeInterval) {
