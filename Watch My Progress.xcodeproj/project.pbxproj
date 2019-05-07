@@ -28,7 +28,6 @@
 		0B0D10482281C41400DF25E6 /* ListOfActivities.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 0B0D10472281C41400DF25E6 /* ListOfActivities.storyboard */; };
 		0B0D104A2281C45800DF25E6 /* ListOfActivitiesController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0B0D10492281C45800DF25E6 /* ListOfActivitiesController.swift */; };
 		0B0D104C2281CE1C00DF25E6 /* List.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 0B0D104B2281CE1C00DF25E6 /* List.storyboard */; };
-		162734812281774A00A26696 /* Ring.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 162734802281774A00A26696 /* Ring.storyboard */; };
 		16273483228179D000A26696 /* RingInterfaceController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 16273482228179D000A26696 /* RingInterfaceController.swift */; };
 		926AC214228175D800A1145F /* HeartRateInterfaceController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 926AC213228175D800A1145F /* HeartRateInterfaceController.swift */; };
 		926AC2162281774100A1145F /* HeartRate.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 926AC2152281774100A1145F /* HeartRate.storyboard */; };
@@ -105,7 +104,6 @@
 		0B0D10472281C41400DF25E6 /* ListOfActivities.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; path = ListOfActivities.storyboard; sourceTree = "<group>"; };
 		0B0D10492281C45800DF25E6 /* ListOfActivitiesController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ListOfActivitiesController.swift; sourceTree = "<group>"; };
 		0B0D104B2281CE1C00DF25E6 /* List.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = List.storyboard; sourceTree = "<group>"; };
-		162734802281774A00A26696 /* Ring.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = Ring.storyboard; sourceTree = "<group>"; };
 		16273482228179D000A26696 /* RingInterfaceController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RingInterfaceController.swift; sourceTree = "<group>"; };
 		926AC213228175D800A1145F /* HeartRateInterfaceController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HeartRateInterfaceController.swift; sourceTree = "<group>"; };
 		926AC2152281774100A1145F /* HeartRate.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = HeartRate.storyboard; sourceTree = "<group>"; };
@@ -176,7 +174,6 @@
 				05A15967228164350020880A /* Interface.storyboard */,
 				05A1596A228164360020880A /* Assets.xcassets */,
 				05A1596C228164360020880A /* Info.plist */,
-				162734802281774A00A26696 /* Ring.storyboard */,
 				0B0D10472281C41400DF25E6 /* ListOfActivities.storyboard */,
 				926AC2152281774100A1145F /* HeartRate.storyboard */,
 				0B0D104B2281CE1C00DF25E6 /* List.storyboard */,
@@ -338,7 +335,6 @@
 			buildActionMask = 2147483647;
 			files = (
 				05A1596B228164360020880A /* Assets.xcassets in Resources */,
-				162734812281774A00A26696 /* Ring.storyboard in Resources */,
 				05A15969228164350020880A /* Interface.storyboard in Resources */,
 				926AC2162281774100A1145F /* HeartRate.storyboard in Resources */,
 				0B0D104C2281CE1C00DF25E6 /* List.storyboard in Resources */,
