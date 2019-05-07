@@ -35,6 +35,7 @@ class InterfaceController: WKInterfaceController {
         if !firstStart {
             mainTimer.setDate(Date())
             mainTimer.start()
+            firstStart = true
             return
             
         }
