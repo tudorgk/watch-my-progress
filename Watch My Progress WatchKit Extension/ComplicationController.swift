@@ -49,7 +49,7 @@ class ComplicationController: NSObject, CLKComplicationDataSource {
             
             let textTemplate = CLKComplicationTemplateModularSmallStackImage()
             
-            textTemplate.line1ImageProvider = CcLKImageProvider(onePieceImage: UIImage(named: "happy")!)
+            textTemplate.line1ImageProvider = CLKImageProvider(onePieceImage: UIImage(named: "happy")!)
             textTemplate.line2TextProvider = CLKSimpleTextProvider(text: firstText,
                                                                    shortText: shortText)
             
