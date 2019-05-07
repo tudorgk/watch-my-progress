@@ -1,0 +1,6 @@
+framework module Thrimer {
+  umbrella header "Thrimer-umbrella.h"
+
+  export *
+  module * { export * }
+}
