@@ -12,5 +12,7 @@ import WatchKit
 
 class HeaderController : NSObject {
     
+    public static let type : String = "Header"
+    
     @IBOutlet weak var titleLabel: WKInterfaceLabel!
 }

@@ -16,6 +16,9 @@ class InterfaceController: WKInterfaceController, PausableTimerDelegate {
     
     @IBOutlet weak var stopButton: WKInterfaceButton!
 
+    @IBAction func switchToListMenuItem() {
+        pushController(withName: "intervalList", context: nil)
+    }
     
     var trackingTimer : PausableTimer?  //internal timer to keep track
     var isPaused = false //flag to determine if it is paused or not
@@ -68,27 +71,38 @@ class InterfaceController: WKInterfaceController, PausableTimerDelegate {
         startPauseButton.setTitle("Start")
         trackingTimer?.stop()
         trackingTimer = nil
+    }
+
     
+    fileprivate func syncUserDefaultsWith(interval: TimeInterval, forKey key: String) {
+        if let oldTimeIntervals = UserDefaults.standard.array(forKey: key) as? [Double] {
+            var intervals: [Double] = []
+            intervals.append(contentsOf: oldTimeIntervals)
+            intervals.append(interval)
+            UserDefaults.standard.set(intervals, forKey: key)
+        } else {
+            UserDefaults.standard.set([interval], forKey: key)
+        }
+    }
+    
+    func timerStopped(interval: TimeInterval) {
         presentAlert(
-            withTitle: "Save your progress?",
+            withTitle: "Hooray! You did \(interval) seconds of work!",
             message: "Choose which project you want to save to",
             preferredStyle: .actionSheet,
             actions: [
                 WKAlertAction(title: "Mobile Meetup Hackathon", style: .default, handler: {
+                    self.syncUserDefaultsWith(interval: interval, forKey: "Mobile Meetup Hackathon")
                     self.dismiss()
                 }),
                 WKAlertAction(title: "Boring Project", style: .default, handler: {
+                    self.syncUserDefaultsWith(interval: interval, forKey: "Boring Project")
                     self.dismiss()
                 }),
                 WKAlertAction(title: "Cancel", style: .cancel, handler: {
                     self.dismiss()
                 })
             ])
-    }
-
-    
-    func timerStopped(PausableTimer: PausableTimer) {
-//        timerLabel.setText(PausableTimer.timeElapsed.debugDescription)
     }
     
     let timerForamtter : DateComponentsFormatter = {
@@ -98,7 +112,6 @@ class InterfaceController: WKInterfaceController, PausableTimerDelegate {
     }()
     
     func elapsedTime(interval: TimeInterval) {
-        
         timerLabel.setText(timerForamtter.string(from: interval))
     }
 
