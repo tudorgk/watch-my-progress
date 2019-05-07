@@ -96,7 +96,7 @@ class InterfaceController: WKInterfaceController, PausableTimerDelegate {
     
     func timerStopped(interval: TimeInterval) {
         presentAlert(
-            withTitle: "Hooray! You did \(timerForamtter.string(from: interval)) seconds of work!",
+            withTitle: "Hooray! You did \(timerForamtter.string(from: interval)) of work!",
             message: "Choose which project you want to save to",
             preferredStyle: .actionSheet,
             actions: [
