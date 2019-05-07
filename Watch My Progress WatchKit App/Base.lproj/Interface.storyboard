@@ -16,7 +16,7 @@
                     <items>
                         <group width="1" height="0.5" alignment="center" id="nmH-Sv-JWU">
                             <items>
-                                <timer alignment="center" verticalAlignment="center" textAlignment="center" enabled="YES" format="short" previewedSeconds="7000" id="vcB-Au-8Bk">
+                                <timer alignment="center" verticalAlignment="center" textAlignment="center" format="short" previewedSeconds="7000" id="vcB-Au-8Bk">
                                     <fontDescription key="font" style="UICTFontTextStyleTitle3"/>
                                 </timer>
                             </items>

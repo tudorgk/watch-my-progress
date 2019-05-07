@@ -18,17 +18,22 @@ class InterfaceController: WKInterfaceController {
 
     var myTimer : Timer?  //internal timer to keep track
     var isPaused = false //flag to determine if it is paused or not
-    var isStarted = false
+    var firstStart = false
+    
+    override func awake(withContext context: Any?) {
+        super.awake(withContext: context)
+        
+    }
     
     override func willActivate(){
         super.willActivate()
     
-        mainTimer.setDate(Date())
-        
+    
     }
     
     @IBAction func pauseResumePressed() {
-        if !isStarted {
+        if !firstStart {
+            mainTimer.setDate(Date())
             mainTimer.start()
             return
             
