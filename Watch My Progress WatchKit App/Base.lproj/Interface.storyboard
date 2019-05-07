@@ -16,7 +16,9 @@
                     <items>
                         <group width="1" height="0.25" alignment="center" id="nmH-Sv-JWU">
                             <items>
-                                <label alignment="center" verticalAlignment="center" text="0 sec" id="Rze-MW-uHi"/>
+                                <label alignment="center" verticalAlignment="center" text="0" textAlignment="center" id="Rze-MW-uHi">
+                                    <fontDescription key="font" style="UICTFontTextStyleTitle2"/>
+                                </label>
                             </items>
                         </group>
                         <group width="1" height="0.5" alignment="center" verticalAlignment="bottom" spacing="7" id="mCR-3t-Fhh">
