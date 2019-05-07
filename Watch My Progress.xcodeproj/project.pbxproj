@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		0414BC6EF31C3C9FC198C429 /* Pods_Watch_My_Progress_WatchKit_Extension.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = DB86F3F0217DEF9D84E4717A /* Pods_Watch_My_Progress_WatchKit_Extension.framework */; };
 		05298F6C2281AC4F0076B225 /* RowController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 05298F6B2281AC4F0076B225 /* RowController.swift */; };
 		05298F6E2281AEE20076B225 /* HeaderController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 05298F6D2281AEE20076B225 /* HeaderController.swift */; };
 		055E3CA322817AA100431F33 /* PausableTimer.swift in Sources */ = {isa = PBXBuildFile; fileRef = 055E3CA222817AA100431F33 /* PausableTimer.swift */; };
@@ -27,6 +28,8 @@
 		05A1597F228164370020880A /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 05A1597E228164370020880A /* Assets.xcassets */; };
 		162734812281774A00A26696 /* Ring.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 162734802281774A00A26696 /* Ring.storyboard */; };
 		16273483228179D000A26696 /* RingInterfaceController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 16273482228179D000A26696 /* RingInterfaceController.swift */; };
+		1E3B8B8EA212021771C5F339 /* Pods_Watch_My_Progress.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 66986D32A8DA66BC35C75D84 /* Pods_Watch_My_Progress.framework */; };
+		860F315A1E8B78B303868E91 /* libPods-Watch My Progress WatchKit App.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 0990B721E21B7D032DAA5808 /* libPods-Watch My Progress WatchKit App.a */; };
 		926AC214228175D800A1145F /* HeartRateInterfaceController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 926AC213228175D800A1145F /* HeartRateInterfaceController.swift */; };
 		926AC2162281774100A1145F /* HeartRate.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 926AC2152281774100A1145F /* HeartRate.storyboard */; };
 		926AC21A22819B0800A1145F /* HealthKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 926AC21922819B0800A1145F /* HealthKit.framework */; };
@@ -76,6 +79,7 @@
 /* End PBXCopyFilesBuildPhase section */
 
 /* Begin PBXFileReference section */
+		032CF74154C193452CD80814 /* Pods-Watch My Progress WatchKit App.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Watch My Progress WatchKit App.release.xcconfig"; path = "Target Support Files/Pods-Watch My Progress WatchKit App/Pods-Watch My Progress WatchKit App.release.xcconfig"; sourceTree = "<group>"; };
 		05298F6B2281AC4F0076B225 /* RowController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RowController.swift; sourceTree = "<group>"; };
 		05298F6D2281AEE20076B225 /* HeaderController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HeaderController.swift; sourceTree = "<group>"; };
 		055E3CA222817AA100431F33 /* PausableTimer.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PausableTimer.swift; sourceTree = "<group>"; };
@@ -99,14 +103,22 @@
 		05A1597E228164370020880A /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		05A15980228164370020880A /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		05A15981228164370020880A /* PushNotificationPayload.apns */ = {isa = PBXFileReference; lastKnownFileType = text; path = PushNotificationPayload.apns; sourceTree = "<group>"; };
+		0990B721E21B7D032DAA5808 /* libPods-Watch My Progress WatchKit App.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = "libPods-Watch My Progress WatchKit App.a"; sourceTree = BUILT_PRODUCTS_DIR; };
 		162734802281774A00A26696 /* Ring.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = Ring.storyboard; sourceTree = "<group>"; };
 		16273482228179D000A26696 /* RingInterfaceController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RingInterfaceController.swift; sourceTree = "<group>"; };
+		66986D32A8DA66BC35C75D84 /* Pods_Watch_My_Progress.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_Watch_My_Progress.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		8DDF95080E386EFCDC45B016 /* Pods-Watch My Progress WatchKit App.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Watch My Progress WatchKit App.debug.xcconfig"; path = "Target Support Files/Pods-Watch My Progress WatchKit App/Pods-Watch My Progress WatchKit App.debug.xcconfig"; sourceTree = "<group>"; };
 		926AC213228175D800A1145F /* HeartRateInterfaceController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HeartRateInterfaceController.swift; sourceTree = "<group>"; };
 		926AC2152281774100A1145F /* HeartRate.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = HeartRate.storyboard; sourceTree = "<group>"; };
 		926AC21722819B0800A1145F /* Watch My Progress WatchKit Extension.entitlements */ = {isa = PBXFileReference; lastKnownFileType = text.plist.entitlements; path = "Watch My Progress WatchKit Extension.entitlements"; sourceTree = "<group>"; };
 		926AC21922819B0800A1145F /* HealthKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = HealthKit.framework; path = Platforms/WatchOS.platform/Developer/SDKs/WatchOS5.2.sdk/System/Library/Frameworks/HealthKit.framework; sourceTree = DEVELOPER_DIR; };
 		926AC21B2281A1AF00A1145F /* Watch My Progress.entitlements */ = {isa = PBXFileReference; lastKnownFileType = text.plist.entitlements; path = "Watch My Progress.entitlements"; sourceTree = "<group>"; };
 		926AC21C2281A1AF00A1145F /* HealthKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = HealthKit.framework; path = System/Library/Frameworks/HealthKit.framework; sourceTree = SDKROOT; };
+		A62E812C41C11EECE4032D09 /* Pods-Watch My Progress.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Watch My Progress.release.xcconfig"; path = "Target Support Files/Pods-Watch My Progress/Pods-Watch My Progress.release.xcconfig"; sourceTree = "<group>"; };
+		BCD098D742390E0A8F95D1C7 /* Pods-Watch My Progress WatchKit Extension.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Watch My Progress WatchKit Extension.debug.xcconfig"; path = "Target Support Files/Pods-Watch My Progress WatchKit Extension/Pods-Watch My Progress WatchKit Extension.debug.xcconfig"; sourceTree = "<group>"; };
+		DB86F3F0217DEF9D84E4717A /* Pods_Watch_My_Progress_WatchKit_Extension.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_Watch_My_Progress_WatchKit_Extension.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		DE92B30C12E1B05B710CCCCB /* Pods-Watch My Progress WatchKit Extension.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Watch My Progress WatchKit Extension.release.xcconfig"; path = "Target Support Files/Pods-Watch My Progress WatchKit Extension/Pods-Watch My Progress WatchKit Extension.release.xcconfig"; sourceTree = "<group>"; };
+		FD2D32A5429BA162FB1EADE5 /* Pods-Watch My Progress.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Watch My Progress.debug.xcconfig"; path = "Target Support Files/Pods-Watch My Progress/Pods-Watch My Progress.debug.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -115,6 +127,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				926AC21D2281A1AF00A1145F /* HealthKit.framework in Frameworks */,
+				1E3B8B8EA212021771C5F339 /* Pods_Watch_My_Progress.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -123,6 +136,15 @@
 			buildActionMask = 2147483647;
 			files = (
 				926AC21A22819B0800A1145F /* HealthKit.framework in Frameworks */,
+				0414BC6EF31C3C9FC198C429 /* Pods_Watch_My_Progress_WatchKit_Extension.framework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		0EB2FE18328DAF320EFD8FF3 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				860F315A1E8B78B303868E91 /* libPods-Watch My Progress WatchKit App.a in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -137,6 +159,7 @@
 				05A15975228164360020880A /* Watch My Progress WatchKit Extension */,
 				05A15951228164340020880A /* Products */,
 				926AC21822819B0800A1145F /* Frameworks */,
+				BA6F9A537ACEA3B012AC3BF4 /* Pods */,
 			);
 			sourceTree = "<group>";
 		};
@@ -202,8 +225,25 @@
 			children = (
 				926AC21C2281A1AF00A1145F /* HealthKit.framework */,
 				926AC21922819B0800A1145F /* HealthKit.framework */,
+				66986D32A8DA66BC35C75D84 /* Pods_Watch_My_Progress.framework */,
+				0990B721E21B7D032DAA5808 /* libPods-Watch My Progress WatchKit App.a */,
+				DB86F3F0217DEF9D84E4717A /* Pods_Watch_My_Progress_WatchKit_Extension.framework */,
 			);
 			name = Frameworks;
+			sourceTree = "<group>";
+		};
+		BA6F9A537ACEA3B012AC3BF4 /* Pods */ = {
+			isa = PBXGroup;
+			children = (
+				FD2D32A5429BA162FB1EADE5 /* Pods-Watch My Progress.debug.xcconfig */,
+				A62E812C41C11EECE4032D09 /* Pods-Watch My Progress.release.xcconfig */,
+				8DDF95080E386EFCDC45B016 /* Pods-Watch My Progress WatchKit App.debug.xcconfig */,
+				032CF74154C193452CD80814 /* Pods-Watch My Progress WatchKit App.release.xcconfig */,
+				BCD098D742390E0A8F95D1C7 /* Pods-Watch My Progress WatchKit Extension.debug.xcconfig */,
+				DE92B30C12E1B05B710CCCCB /* Pods-Watch My Progress WatchKit Extension.release.xcconfig */,
+			);
+			name = Pods;
+			path = Pods;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -213,6 +253,7 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = 05A1598C228164370020880A /* Build configuration list for PBXNativeTarget "Watch My Progress" */;
 			buildPhases = (
+				5F26F024BE3DD0DE0ADBEC19 /* [CP] Check Pods Manifest.lock */,
 				05A1594C228164340020880A /* Sources */,
 				05A1594D228164340020880A /* Frameworks */,
 				05A1594E228164340020880A /* Resources */,
@@ -232,8 +273,10 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = 05A15988228164370020880A /* Build configuration list for PBXNativeTarget "Watch My Progress WatchKit App" */;
 			buildPhases = (
+				2461CCCFD001AC3092F9E8C7 /* [CP] Check Pods Manifest.lock */,
 				05A15960228164350020880A /* Resources */,
 				05A15987228164370020880A /* Embed App Extensions */,
+				0EB2FE18328DAF320EFD8FF3 /* Frameworks */,
 			);
 			buildRules = (
 			);
@@ -249,9 +292,11 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = 05A15984228164370020880A /* Build configuration list for PBXNativeTarget "Watch My Progress WatchKit Extension" */;
 			buildPhases = (
+				A091A37BD574CA9C6B2CA6A9 /* [CP] Check Pods Manifest.lock */,
 				05A1596D228164360020880A /* Sources */,
 				05A1596E228164360020880A /* Frameworks */,
 				05A1596F228164360020880A /* Resources */,
+				3132ED1F2752C1A20716A265 /* [CP] Embed Pods Frameworks */,
 			);
 			buildRules = (
 			);
@@ -344,6 +389,97 @@
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXResourcesBuildPhase section */
+
+/* Begin PBXShellScriptBuildPhase section */
+		2461CCCFD001AC3092F9E8C7 /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+			);
+			inputPaths = (
+				"${PODS_PODFILE_DIR_PATH}/Podfile.lock",
+				"${PODS_ROOT}/Manifest.lock",
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputFileListPaths = (
+			);
+			outputPaths = (
+				"$(DERIVED_FILE_DIR)/Pods-Watch My Progress WatchKit App-checkManifestLockResult.txt",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
+			showEnvVarsInLog = 0;
+		};
+		3132ED1F2752C1A20716A265 /* [CP] Embed Pods Frameworks */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+			);
+			inputPaths = (
+				"${PODS_ROOT}/Target Support Files/Pods-Watch My Progress WatchKit Extension/Pods-Watch My Progress WatchKit Extension-frameworks.sh",
+				"${BUILT_PRODUCTS_DIR}/YOChartImageKit/YOChartImageKit.framework",
+			);
+			name = "[CP] Embed Pods Frameworks";
+			outputFileListPaths = (
+			);
+			outputPaths = (
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/YOChartImageKit.framework",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${PODS_ROOT}/Target Support Files/Pods-Watch My Progress WatchKit Extension/Pods-Watch My Progress WatchKit Extension-frameworks.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		5F26F024BE3DD0DE0ADBEC19 /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+			);
+			inputPaths = (
+				"${PODS_PODFILE_DIR_PATH}/Podfile.lock",
+				"${PODS_ROOT}/Manifest.lock",
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputFileListPaths = (
+			);
+			outputPaths = (
+				"$(DERIVED_FILE_DIR)/Pods-Watch My Progress-checkManifestLockResult.txt",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
+			showEnvVarsInLog = 0;
+		};
+		A091A37BD574CA9C6B2CA6A9 /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+			);
+			inputPaths = (
+				"${PODS_PODFILE_DIR_PATH}/Podfile.lock",
+				"${PODS_ROOT}/Manifest.lock",
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputFileListPaths = (
+			);
+			outputPaths = (
+				"$(DERIVED_FILE_DIR)/Pods-Watch My Progress WatchKit Extension-checkManifestLockResult.txt",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
+			showEnvVarsInLog = 0;
+		};
+/* End PBXShellScriptBuildPhase section */
 
 /* Begin PBXSourcesBuildPhase section */
 		05A1594C228164340020880A /* Sources */ = {
@@ -533,18 +669,19 @@
 		};
 		05A15985228164370020880A /* Debug */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = BCD098D742390E0A8F95D1C7 /* Pods-Watch My Progress WatchKit Extension.debug.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_COMPLICATION_NAME = Complication;
 				CODE_SIGN_ENTITLEMENTS = "Watch My Progress WatchKit Extension/Watch My Progress WatchKit Extension.entitlements";
 				CODE_SIGN_STYLE = Automatic;
-				DEVELOPMENT_TEAM = HMP4RRN555;
+				DEVELOPMENT_TEAM = 3BV9N9NC68;
 				INFOPLIST_FILE = "Watch My Progress WatchKit Extension/Info.plist";
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
 					"@executable_path/../../Frameworks",
 				);
-				PRODUCT_BUNDLE_IDENTIFIER = "com.watch.my.progress.Watch-My-Progress.watchkitapp.watchkitextension";
+				PRODUCT_BUNDLE_IDENTIFIER = "com.watch.my.progress.Watch-My-Progress2.watchkit.extension";
 				PRODUCT_NAME = "${TARGET_NAME}";
 				SDKROOT = watchos;
 				SKIP_INSTALL = YES;
@@ -556,18 +693,19 @@
 		};
 		05A15986228164370020880A /* Release */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = DE92B30C12E1B05B710CCCCB /* Pods-Watch My Progress WatchKit Extension.release.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_COMPLICATION_NAME = Complication;
 				CODE_SIGN_ENTITLEMENTS = "Watch My Progress WatchKit Extension/Watch My Progress WatchKit Extension.entitlements";
 				CODE_SIGN_STYLE = Automatic;
-				DEVELOPMENT_TEAM = HMP4RRN555;
+				DEVELOPMENT_TEAM = 3BV9N9NC68;
 				INFOPLIST_FILE = "Watch My Progress WatchKit Extension/Info.plist";
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
 					"@executable_path/../../Frameworks",
 				);
-				PRODUCT_BUNDLE_IDENTIFIER = "com.watch.my.progress.Watch-My-Progress.watchkitapp.watchkitextension";
+				PRODUCT_BUNDLE_IDENTIFIER = "com.watch.my.progress.Watch-My-Progress2.watchkit.extension";
 				PRODUCT_NAME = "${TARGET_NAME}";
 				SDKROOT = watchos;
 				SKIP_INSTALL = YES;
@@ -579,14 +717,15 @@
 		};
 		05A15989228164370020880A /* Debug */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 8DDF95080E386EFCDC45B016 /* Pods-Watch My Progress WatchKit App.debug.xcconfig */;
 			buildSettings = {
 				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;
-				DEVELOPMENT_TEAM = HMP4RRN555;
+				DEVELOPMENT_TEAM = 3BV9N9NC68;
 				IBSC_MODULE = Watch_My_Progress_WatchKit_Extension;
 				INFOPLIST_FILE = "Watch My Progress WatchKit App/Info.plist";
-				PRODUCT_BUNDLE_IDENTIFIER = "com.watch.my.progress.Watch-My-Progress.watchkitapp";
+				PRODUCT_BUNDLE_IDENTIFIER = "com.watch.my.progress.Watch-My-Progress2.watchkit";
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SDKROOT = watchos;
 				SKIP_INSTALL = YES;
@@ -598,14 +737,15 @@
 		};
 		05A1598A228164370020880A /* Release */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 032CF74154C193452CD80814 /* Pods-Watch My Progress WatchKit App.release.xcconfig */;
 			buildSettings = {
 				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;
-				DEVELOPMENT_TEAM = HMP4RRN555;
+				DEVELOPMENT_TEAM = 3BV9N9NC68;
 				IBSC_MODULE = Watch_My_Progress_WatchKit_Extension;
 				INFOPLIST_FILE = "Watch My Progress WatchKit App/Info.plist";
-				PRODUCT_BUNDLE_IDENTIFIER = "com.watch.my.progress.Watch-My-Progress.watchkitapp";
+				PRODUCT_BUNDLE_IDENTIFIER = "com.watch.my.progress.Watch-My-Progress2.watchkit";
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SDKROOT = watchos;
 				SKIP_INSTALL = YES;
@@ -617,17 +757,18 @@
 		};
 		05A1598D228164370020880A /* Debug */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = FD2D32A5429BA162FB1EADE5 /* Pods-Watch My Progress.debug.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_ENTITLEMENTS = "Watch My Progress/Watch My Progress.entitlements";
 				CODE_SIGN_STYLE = Automatic;
-				DEVELOPMENT_TEAM = HMP4RRN555;
+				DEVELOPMENT_TEAM = 3BV9N9NC68;
 				INFOPLIST_FILE = "Watch My Progress/Info.plist";
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
 				);
-				PRODUCT_BUNDLE_IDENTIFIER = "com.watch.my.progress.Watch-My-Progress";
+				PRODUCT_BUNDLE_IDENTIFIER = "com.watch.my.progress.Watch-My-Progress2";
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_VERSION = 4.2;
 				TARGETED_DEVICE_FAMILY = "1,2";
@@ -636,17 +777,18 @@
 		};
 		05A1598E228164370020880A /* Release */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = A62E812C41C11EECE4032D09 /* Pods-Watch My Progress.release.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_ENTITLEMENTS = "Watch My Progress/Watch My Progress.entitlements";
 				CODE_SIGN_STYLE = Automatic;
-				DEVELOPMENT_TEAM = HMP4RRN555;
+				DEVELOPMENT_TEAM = 3BV9N9NC68;
 				INFOPLIST_FILE = "Watch My Progress/Info.plist";
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
 				);
-				PRODUCT_BUNDLE_IDENTIFIER = "com.watch.my.progress.Watch-My-Progress";
+				PRODUCT_BUNDLE_IDENTIFIER = "com.watch.my.progress.Watch-My-Progress2";
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_VERSION = 4.2;
 				TARGETED_DEVICE_FAMILY = "1,2";

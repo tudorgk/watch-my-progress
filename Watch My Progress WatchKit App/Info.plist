@@ -26,7 +26,7 @@
 		<string>UIInterfaceOrientationPortraitUpsideDown</string>
 	</array>
 	<key>WKCompanionAppBundleIdentifier</key>
-	<string>com.watch.my.progress.Watch-My-Progress</string>
+	<string>com.watch.my.progress.Watch-My-Progress2</string>
 	<key>WKWatchKitApp</key>
 	<true/>
 </dict>

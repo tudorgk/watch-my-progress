@@ -41,7 +41,7 @@
 		<key>NSExtensionAttributes</key>
 		<dict>
 			<key>WKAppBundleIdentifier</key>
-			<string>com.watch.my.progress.Watch-My-Progress.watchkitapp</string>
+			<string>com.watch.my.progress.Watch-My-Progress2.watchkit</string>
 		</dict>
 		<key>NSExtensionPointIdentifier</key>
 		<string>com.apple.watchkit</string>

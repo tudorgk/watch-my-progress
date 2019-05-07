@@ -12,25 +12,27 @@ import HealthKit
 import YOChartImageKit
 
 class HeartRateInterfaceController: WKInterfaceController {
+    @IBOutlet private weak var calendarBarsImage: WKInterfaceImage!
     @IBOutlet private weak var image: WKInterfaceImage!
 
     override func willActivate() {
         // This method is called when watch view controller is about to be visible to user
         super.willActivate()
 
-        let rates = [50, 51, 52, 53, 54, 55, 70, 90, 120, 180, 155, 143, 128, 111, 78, 53, 43, 12, 0]
+        calendarBarsImage.setImage(UIImage(named: "fake-bars"))
+
+        let rates = [50, 51, 52, 53, 54, 55, 70, 90, 120, 180, 155, 143, 128, 111, 78, 53, 43, 12, 23, 43, 50, 47, 55, 63, 71, 80, 77, 85, 75, 78, 80, 81]
         let values = rates.map { NSNumber(value: $0) }
 
-
-
         let frame = CGRect(x: 0,
-                           y: 0,
+                           y: 100,
                            width: self.contentFrame.width,
                            height: self.contentFrame.height * 0.8)
 
         let chart = YOBarChartImage()
         chart.values = values
         chart.fillColor = UIColor.red
+
 
         let chartImage = chart.draw(frame, scale: WKInterfaceDevice.current().screenScale)
         self.image.setImage(chartImage)
